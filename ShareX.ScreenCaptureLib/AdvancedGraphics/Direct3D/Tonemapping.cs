@@ -30,8 +30,8 @@ public class Tonemapping
     ];
 
     public static ID3D11Texture2D TonemapOnGpu(HdrSettings hdrSettings, ModernCaptureMonitorDescription region, DeviceAccess deviceAccess,
-        ID3D11Texture2D cpuStaging, ID3D11Texture2D gpuRawTexture, ID3D11Texture2D canvasGpu,     Box                                  destBox,
-        Box                                  srcBox)
+        ID3D11Texture2D cpuStaging, ID3D11Texture2D gpuRawTexture, ID3D11Texture2D canvasGpu, Box destBox,
+        Box srcBox, ModeRotation rotation = ModeRotation.Identity)
     {
         ID3D11Device device = deviceAccess.Device;
         ID3D11DeviceContext ctx = device.ImmediateContext;
@@ -45,18 +45,51 @@ public class Tonemapping
         float u1 = u0 + (srcBox.Width / (float)rawDesc.Width);
         float v1 = v0 + (srcBox.Height / (float)rawDesc.Height);
 
+        // Apply rotation to texture coordinates
+        Vector2 uv_topLeft, uv_topRight, uv_bottomLeft, uv_bottomRight;
+        switch (rotation)
+        {
+            case ModeRotation.Rotate90:
+                // 90° clockwise: screen top-left samples from texture bottom-left
+                uv_topLeft = new Vector2(u0, v1);      // bottom-left of texture
+                uv_topRight = new Vector2(u0, v0);     // top-left of texture
+                uv_bottomLeft = new Vector2(u1, v1);   // bottom-right of texture
+                uv_bottomRight = new Vector2(u1, v0);  // top-right of texture
+                break;
+            case ModeRotation.Rotate180:
+                // 180°: flip both dimensions
+                uv_topLeft = new Vector2(u1, v1);
+                uv_topRight = new Vector2(u0, v1);
+                uv_bottomLeft = new Vector2(u1, v0);
+                uv_bottomRight = new Vector2(u0, v0);
+                break;
+            case ModeRotation.Rotate270:
+                // 270° clockwise (90° counter-clockwise)
+                uv_topLeft = new Vector2(u1, v0);
+                uv_topRight = new Vector2(u1, v1);
+                uv_bottomLeft = new Vector2(u0, v0);
+                uv_bottomRight = new Vector2(u0, v1);
+                break;
+            default: // Identity
+                uv_topLeft = new Vector2(u0, v0);
+                uv_topRight = new Vector2(u1, v0);
+                uv_bottomLeft = new Vector2(u0, v1);
+                uv_bottomRight = new Vector2(u1, v1);
+                break;
+        }
+
         float left = -1.0f;
         float right = 1.0f;
         float bottom = -1.0f;
         float top = 1.0f;
         var quadVerts = new[]
         {
-            new Vertex(new Vector2(left, top),  new Vector2(u0, v0)),
-            new Vertex(new Vector2(right, top),  new Vector2(u1, v0)),
-            new Vertex(new Vector2(left, bottom),  new Vector2(u0, v1)),
-            new Vertex(new Vector2(left, bottom),  new Vector2(u0, v1)),
-            new Vertex(new Vector2(right, top),  new Vector2(u1, v0)),
-            new Vertex(new Vector2(right, bottom),  new Vector2(u1, v1)),
+            new Vertex(new Vector2(left, top),  uv_topLeft),
+            new Vertex(new Vector2(right, top),  uv_topRight),
+            new Vertex(new Vector2(left, bottom),  uv_bottomLeft),
+            new Vertex(new Vector2(left, bottom),  uv_bottomLeft),
+            new Vertex(new Vector2(right, top),  uv_topRight),
+            new Vertex(new Vector2(right, bottom),  uv_bottomRight),
         };
 
 

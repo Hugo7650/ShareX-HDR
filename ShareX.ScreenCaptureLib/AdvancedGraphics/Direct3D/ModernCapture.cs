@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Numerics;
 using System.Reflection;
 using System.Threading;
 using ShareX.ScreenCaptureLib.AdvancedGraphics.Direct3D.Shaders;
@@ -77,11 +78,12 @@ public class ModernCapture : IDisposable, DisposableCache
     private readonly Dictionary<IntPtr /*hmon*/, DuplicationState> _duplications = new();
     private readonly Lock _lock = new(); // makes first-time creation threadsafe
 
-    private sealed class DuplicationState(IDXGIOutputDuplication dup, ID3D11Texture2D staging, bool isHdr, ID3D11Device device) : IDisposable, DisposableCache
+    private sealed class DuplicationState(IDXGIOutputDuplication dup, ID3D11Texture2D staging, bool isHdr, ID3D11Device device, ModeRotation rotation) : IDisposable, DisposableCache
     {
         public IDXGIOutputDuplication Dup { get; } = dup;
         public ID3D11Texture2D Staging { get; set; } = staging;
         public bool IsHdr { get; } = isHdr;
+        public ModeRotation Rotation { get; } = rotation;
 
         public ID3D11Device Device = device;
 
@@ -155,7 +157,7 @@ public class ModernCapture : IDisposable, DisposableCache
             var desc = dup.Description;
             bool isHdr = desc.ModeDescription.Format == Format.R16G16B16A16_Float;
 
-            state = new DuplicationState(dup, CreateStagingBuffer(screen.Device, desc), isHdr, screen.Device);
+            state = new DuplicationState(dup, CreateStagingBuffer(screen.Device, desc), isHdr, screen.Device, desc.Rotation);
             _duplications[hmon] = state;
             return state;
         }
@@ -163,10 +165,15 @@ public class ModernCapture : IDisposable, DisposableCache
 
     private ID3D11Texture2D CreateStagingBuffer(ID3D11Device device, OutduplDescription desc)
     {
+        // Handle rotated displays - swap width/height for 90° and 270° rotation
+        bool isRotated = desc.Rotation == ModeRotation.Rotate90 || desc.Rotation == ModeRotation.Rotate270;
+        uint width = isRotated ? desc.ModeDescription.Height : desc.ModeDescription.Width;
+        uint height = isRotated ? desc.ModeDescription.Width : desc.ModeDescription.Height;
+
         var texDesc = new Texture2DDescription
         {
-            Width = desc.ModeDescription.Width,
-            Height = desc.ModeDescription.Height,
+            Width = width,
+            Height = height,
             MipLevels = 1,
             ArraySize = 1,
             Format = desc.ModeDescription.Format,
@@ -176,6 +183,91 @@ public class ModernCapture : IDisposable, DisposableCache
             CPUAccessFlags = CpuAccessFlags.Read | CpuAccessFlags.Write
         };
         return device.CreateTexture2D(texDesc);
+    }
+
+    private void CopyRotatedRegionToCanvas(DeviceAccess deviceAccess, ID3D11Texture2D sourceTexture, 
+        ID3D11Texture2D canvasGpu, ID3D11DeviceContext ctx, Box srcBox, Box destBox, ModeRotation rotation)
+    {
+        ID3D11Device device = deviceAccess.Device;
+        
+        // Calculate UV coordinates based on rotation
+        var srcDesc = sourceTexture.Description;
+        float u0, v0, u1, v1;
+        
+        if (rotation == ModeRotation.Rotate90)
+        {
+            // 90° clockwise rotation
+            u0 = (srcDesc.Height - srcBox.Bottom) / (float)srcDesc.Height;
+            v0 = srcBox.Left / (float)srcDesc.Width;
+            u1 = (srcDesc.Height - srcBox.Top) / (float)srcDesc.Height;
+            v1 = srcBox.Right / (float)srcDesc.Width;
+        }
+        else if (rotation == ModeRotation.Rotate270)
+        {
+            // 270° clockwise rotation (90° counter-clockwise)
+            u0 = srcBox.Top / (float)srcDesc.Height;
+            v0 = (srcDesc.Width - srcBox.Right) / (float)srcDesc.Width;
+            u1 = srcBox.Bottom / (float)srcDesc.Height;
+            v1 = (srcDesc.Width - srcBox.Left) / (float)srcDesc.Width;
+        }
+        else // ModeRotation.Rotate180
+        {
+            // 180° rotation - flip both axes
+            u0 = (srcDesc.Width - srcBox.Right) / (float)srcDesc.Width;
+            v0 = (srcDesc.Height - srcBox.Bottom) / (float)srcDesc.Height;
+            u1 = (srcDesc.Width - srcBox.Left) / (float)srcDesc.Width;
+            v1 = (srcDesc.Height - srcBox.Top) / (float)srcDesc.Height;
+        }
+
+        // Create quad vertices for the destination region
+        float left = -1.0f;
+        float right = 1.0f;
+        float bottom = -1.0f;
+        float top = 1.0f;
+        
+        var quadVerts = new[]
+        {
+            new Vertex(new Vector2(left, top), new Vector2(u0, v0)),
+            new Vertex(new Vector2(right, top), new Vector2(u1, v0)),
+            new Vertex(new Vector2(left, bottom), new Vector2(u0, v1)),
+            new Vertex(new Vector2(left, bottom), new Vector2(u0, v1)),
+            new Vertex(new Vector2(right, top), new Vector2(u1, v0)),
+            new Vertex(new Vector2(right, bottom), new Vector2(u1, v1)),
+        };
+
+        using var vertexBuffer = device.CreateBuffer(quadVerts, BindFlags.VertexBuffer);
+        using var rtv = device.CreateRenderTargetView(canvasGpu);
+        
+        var srvDesc = new ShaderResourceViewDescription
+        {
+            Format = srcDesc.Format,
+            ViewDimension = ShaderResourceViewDimension.Texture2D,
+            Texture2D = new Texture2DShaderResourceView { MostDetailedMip = 0, MipLevels = 1 }
+        };
+        using var srv = device.CreateShaderResourceView(sourceTexture, srvDesc);
+
+        ctx.OMSetRenderTargets(rtv);
+        
+        var viewport = new Viewport
+        {
+            X = destBox.Left,
+            Y = destBox.Top,
+            Width = destBox.Width,
+            Height = destBox.Height,
+            MinDepth = 0,
+            MaxDepth = 1
+        };
+        ctx.RSSetViewport(viewport);
+
+        ctx.IASetPrimitiveTopology(PrimitiveTopology.TriangleList);
+        ctx.IASetInputLayout(deviceAccess.inputLayout);
+        ctx.IASetVertexBuffer(0, vertexBuffer, Vertex.SizeInBytes);
+        ctx.VSSetShader(deviceAccess.vxShader);
+        ctx.PSSetShader(deviceAccess.pxShader);
+        ctx.PSSetSampler(0, deviceAccess.samplerState);
+        ctx.PSSetShaderResource(0, srv);
+
+        ctx.Draw(6, 0);
     }
 
 
@@ -305,23 +397,71 @@ public class ModernCapture : IDisposable, DisposableCache
                     Bottom = ( r.DestGdiRect.Y - item.CanvasRect.Top) + r.DestGdiRect.Height
                 };
 
-                //   srcBox is the sub‐rectangle inside ldrSource
-                var srcBox = new Box
+                //   srcBox is the sub‐rectangle inside frameTex
+                //   Need to consider rotation: for 90/270 degree rotations, coordinates are transformed
+                Box srcBox;
+                bool needsRotation = dupState.Rotation == ModeRotation.Rotate90 || dupState.Rotation == ModeRotation.Rotate270;
+                
+                if (dupState.Rotation == ModeRotation.Rotate90)
                 {
-                    Left = srcRect.X,
-                    Top = srcRect.Y,
-                    Front = 0,
-                    Back = 1,
-                    Right = srcRect.Right,
-                    Bottom = srcRect.Bottom
-                };
+                    // For 90° clockwise: physical (0,0) = logical (height, 0)
+                    // Logical srcRect needs to be transformed to physical coordinates
+                    srcBox = new Box
+                    {
+                        Left = srcRect.Y,
+                        Top = (int)frameTex.Description.Height - srcRect.Right,
+                        Front = 0,
+                        Back = 1,
+                        Right = srcRect.Bottom,
+                        Bottom = (int)frameTex.Description.Height - srcRect.Left
+                    };
+                }
+                else if (dupState.Rotation == ModeRotation.Rotate270)
+                {
+                    // For 270° clockwise (90° counter-clockwise): physical (0,0) = logical (0, width)
+                    srcBox = new Box
+                    {
+                        Left = (int)frameTex.Description.Width - srcRect.Bottom,
+                        Top = srcRect.X,
+                        Front = 0,
+                        Back = 1,
+                        Right = (int)frameTex.Description.Width - srcRect.Top,
+                        Bottom = srcRect.Right
+                    };
+                }
+                else if (dupState.Rotation == ModeRotation.Rotate180)
+                {
+                    // For 180°: flip both axes
+                    srcBox = new Box
+                    {
+                        Left = (int)frameTex.Description.Width - srcRect.Right,
+                        Top = (int)frameTex.Description.Height - srcRect.Bottom,
+                        Front = 0,
+                        Back = 1,
+                        Right = (int)frameTex.Description.Width - srcRect.Left,
+                        Bottom = (int)frameTex.Description.Height - srcRect.Top
+                    };
+                }
+                else
+                {
+                    // No rotation or Identity
+                    srcBox = new Box
+                    {
+                        Left = srcRect.X,
+                        Top = srcRect.Y,
+                        Front = 0,
+                        Back = 1,
+                        Right = srcRect.Right,
+                        Bottom = srcRect.Bottom
+                    };
+                }
 
                 if (dupState.IsHdr)
                 {
                     if (!forceCpuTonemap)
                     {
                         // GPU path: convert HDR staging → B8G8R8A8_UNorm GPU texture
-                        ldrSource = Tonemapping.TonemapOnGpu(Settings, state.Region, state.DeviceAccess, dupState.Staging, frameTex, canvasGpu, destBox, srcBox);
+                        ldrSource = Tonemapping.TonemapOnGpu(Settings, state.Region, state.DeviceAccess, dupState.Staging, frameTex, canvasGpu, destBox, srcBox, dupState.Rotation);
                     }
                     else
                     {
@@ -331,16 +471,24 @@ public class ModernCapture : IDisposable, DisposableCache
                 }
                 else
                 {
-                    canvasContext.CopySubresourceRegion(
-                        canvasGpu, // destination (big canvas)
-                        0, // dest mip
-                        (uint)destBox.Left, // dest X offset in canvas
-                        (uint)destBox.Top, // dest Y offset in canvas
-                        0, // dest Z
-                        ldrSource, // source texture (either GPU‐tonemapped or staging if it was already unorm)
-                        0, // source mip
-                        srcBox
-                    );
+                    // For rotated displays, use GPU path to handle rotation
+                    if (needsRotation)
+                    {
+                        CopyRotatedRegionToCanvas(state.DeviceAccess, frameTex, canvasGpu, canvasContext, srcBox, destBox, dupState.Rotation);
+                    }
+                    else
+                    {
+                        canvasContext.CopySubresourceRegion(
+                            canvasGpu, // destination (big canvas)
+                            0, // dest mip
+                            (uint)destBox.Left, // dest X offset in canvas
+                            (uint)destBox.Top, // dest Y offset in canvas
+                            0, // dest Z
+                            ldrSource, // source texture (either GPU‐tonemapped or staging if it was already unorm)
+                            0, // source mip
+                            srcBox
+                        );
+                    }
                 }
                 dupState.ReleaseFrame(!Settings.ReuseBuffers);
             } // end per‐region loop
