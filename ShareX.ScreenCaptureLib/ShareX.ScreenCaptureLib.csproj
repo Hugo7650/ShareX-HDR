@@ -48,8 +48,18 @@
     <PropertyGroup>
       <ShaderOutputPath>$(IntermediateOutputPath)AdvancedGraphics\Direct3D\Shaders</ShaderOutputPath>
     </PropertyGroup>
+    <!-- Find Windows SDK fxc.exe -->
+    <ItemGroup>
+      <FxcCandidates Include="C:\Program Files (x86)\Windows Kits\10\bin\**\x64\fxc.exe" />
+    </ItemGroup>
+    <PropertyGroup>
+      <FxcExe Condition="'@(FxcCandidates)' != ''">@(FxcCandidates->Reverse(), ';')</FxcExe>
+      <FxcExe Condition="'$(FxcExe)' == ''">fxc.exe</FxcExe>
+      <!-- Get first match -->
+      <FxcExe>$([System.String]::Copy('$(FxcExe)').Split(';')[0])</FxcExe>
+    </PropertyGroup>
     <MakeDir Directories="$(ShaderOutputPath)" />
-    <Exec Command="fxc.exe /T ps_5_0 /E main /Fo &quot;$(ShaderOutputPath)\PostProcessingColor.cso&quot; &quot;%(PixelShader.Identity)&quot;" WorkingDirectory="$(ProjectDir)" />
-    <Exec Command="fxc.exe /T vs_5_0 /E main /Fo &quot;$(ShaderOutputPath)\PostProcessingQuad.cso&quot; &quot;%(VertexShader.Identity)&quot;" WorkingDirectory="$(ProjectDir)" />
+    <Exec Command="&quot;$(FxcExe)&quot; /T ps_5_0 /E main /Fo &quot;$(ShaderOutputPath)\PostProcessingColor.cso&quot; &quot;%(PixelShader.Identity)&quot;" WorkingDirectory="$(ProjectDir)" />
+    <Exec Command="&quot;$(FxcExe)&quot; /T vs_5_0 /E main /Fo &quot;$(ShaderOutputPath)\PostProcessingQuad.cso&quot; &quot;%(VertexShader.Identity)&quot;" WorkingDirectory="$(ProjectDir)" />
   </Target>
 </Project>
