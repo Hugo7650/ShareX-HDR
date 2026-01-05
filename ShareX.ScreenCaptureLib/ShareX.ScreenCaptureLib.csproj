@@ -44,4 +44,12 @@
       <LogicalName>D3D11Shaders.PostProcessingQuad.cso</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
+  <Target Name="CompileShaders" BeforeTargets="CoreCompile">
+    <PropertyGroup>
+      <ShaderOutputPath>$(IntermediateOutputPath)AdvancedGraphics\Direct3D\Shaders</ShaderOutputPath>
+    </PropertyGroup>
+    <MakeDir Directories="$(ShaderOutputPath)" />
+    <Exec Command="fxc.exe /T ps_5_0 /E main /Fo &quot;$(ShaderOutputPath)\PostProcessingColor.cso&quot; &quot;%(PixelShader.Identity)&quot;" WorkingDirectory="$(ProjectDir)" />
+    <Exec Command="fxc.exe /T vs_5_0 /E main /Fo &quot;$(ShaderOutputPath)\PostProcessingQuad.cso&quot; &quot;%(VertexShader.Identity)&quot;" WorkingDirectory="$(ProjectDir)" />
+  </Target>
 </Project>
