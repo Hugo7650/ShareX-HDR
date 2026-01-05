@@ -167,8 +167,6 @@ public class Tonemapping
     // heavily inspired by https://github.com/SpecialKO/SKIV/blob/ed2a4a9de93ebba9661f9e8ed31c5d67ab490d2d/src/utility/image.cpp#L1300C1-L1300C25
     // MIT License Copyright (c) 2024 Aemony
 
-    private static readonly string defaultSDRFileExt = ".png";
-
     // TODO: consider threads?
     public static ImageInfo CalculateImageInfo(Direct3DUtils.PixelReader pixelReader)
     {

@@ -296,7 +296,6 @@ public class ModernCapture : IDisposable, DisposableCache
             ID3D11DeviceContext commonCtx = null;
             bool hasCommonDevice = true;
             var perRegionState = new List<RegionTempState>();
-            ID3D11Device firstDevice = null;
 
             foreach (var r in item.Regions)
             {
