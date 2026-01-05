@@ -26,14 +26,13 @@
 using ShareX.HelpersLib;
 using ShareX.Properties;
 using ShareX.ScreenCaptureLib;
-using ShareX.ScreenCaptureLib.AdvancedGraphics.Direct3D;
+using ShareX.ScreenCaptureLib.AdvancedGraphics;
 using ShareX.UploadersLib;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using ShareX.ScreenCaptureLib.AdvancedGraphics;
 
 namespace ShareX
 {
@@ -274,8 +273,6 @@ namespace ShareX
             #region General
 
             cbShowCursor.Checked = TaskSettings.CaptureSettings.ShowCursor;
-            cbUseHDR.Checked = TaskSettings.CaptureSettings.UseHDRSupport;
-            cbUseHDR.Enabled = true;
             nudScreenshotDelay.SetValue(TaskSettings.CaptureSettings.ScreenshotDelay);
             cbCaptureTransparent.Checked = TaskSettings.CaptureSettings.CaptureTransparent;
             cbCaptureShadow.Enabled = TaskSettings.CaptureSettings.CaptureTransparent;
@@ -289,13 +286,6 @@ namespace ShareX
             nudCaptureCustomRegionWidth.SetValue(TaskSettings.CaptureSettings.CaptureCustomRegion.Width);
             nudCaptureCustomRegionHeight.SetValue(TaskSettings.CaptureSettings.CaptureCustomRegion.Height);
             txtCaptureCustomWindow.Text = TaskSettings.CaptureSettings.CaptureCustomWindow;
-            cbToneMapType.Items.AddRange(Enum.GetNames(typeof(HdrToneMapType)));
-            cbToneMapType.SelectedIndex = (int)TaskSettings.CaptureSettings.HdrSettings.HdrToneMapType;
-            nudCaptureHDRNits.Value = (decimal)TaskSettings.CaptureSettings.HdrSettings.HdrBrightnessNits;
-            nudCaptureBrightnessScale.Value = (decimal)TaskSettings.CaptureSettings.HdrSettings.BrightnessScale;
-            nudCaptureSDRScale.Value = (decimal)TaskSettings.CaptureSettings.HdrSettings.SdrWhiteScale;
-            cbUse99ThPercentileMaxCll.Checked = TaskSettings.CaptureSettings.HdrSettings.Use99ThPercentileMaxCll;
-
 
             #endregion General
 
@@ -406,6 +396,19 @@ namespace ShareX
             cbCloseWindowAfterOpenServiceLink.Checked = ocrOptions.CloseWindowAfterOpeningServiceLink;
 
             #endregion OCR
+
+            #region HDR
+
+            cbUseHDR.Checked = TaskSettings.CaptureSettings.UseHDRSupport;
+            cbUseHDR.Enabled = true;
+            cbToneMapType.Items.AddRange(Enum.GetNames(typeof(HdrToneMapType)));
+            cbToneMapType.SelectedIndex = (int)TaskSettings.CaptureSettings.HdrSettings.HdrToneMapType;
+            nudCaptureHDRNits.Value = (decimal)TaskSettings.CaptureSettings.HdrSettings.HdrBrightnessNits;
+            nudCaptureBrightnessScale.Value = (decimal)TaskSettings.CaptureSettings.HdrSettings.BrightnessScale;
+            nudCaptureSDRScale.Value = (decimal)TaskSettings.CaptureSettings.HdrSettings.SdrWhiteScale;
+            cbUse99ThPercentileMaxCll.Checked = TaskSettings.CaptureSettings.HdrSettings.Use99ThPercentileMaxCll;
+
+            #endregion HDR
 
             #endregion Capture
 
@@ -982,11 +985,6 @@ namespace ShareX
             TaskSettings.ImageSettings.ImageFormat = (EImageFormat)cbImageFormat.SelectedIndex;
         }
 
-        private void cbToneMapType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TaskSettings.CaptureSettings.HdrSettings.HdrToneMapType = (HdrToneMapType)cbToneMapType.SelectedIndex;
-        }
-
         private void cbImagePNGBitDepth_SelectedIndexChanged(object sender, EventArgs e)
         {
             TaskSettings.ImageSettings.ImagePNGBitDepth = (PNGBitDepth)cbImagePNGBitDepth.SelectedIndex;
@@ -1080,11 +1078,6 @@ namespace ShareX
         private void cbShowCursor_CheckedChanged(object sender, EventArgs e)
         {
             TaskSettings.CaptureSettings.ShowCursor = cbShowCursor.Checked;
-        }
-
-        private void cbUseWinRTCapture_CheckedChanged(object sender, EventArgs e)
-        {
-            TaskSettings.CaptureSettings.UseHDRSupport = cbUseHDR.Checked;
         }
 
         private void nudScreenshotDelay_ValueChanged(object sender, EventArgs e)
@@ -1425,6 +1418,40 @@ namespace ShareX
         }
 
         #endregion OCR
+
+        #region HDR
+
+        private void cbToneMapType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TaskSettings.CaptureSettings.HdrSettings.HdrToneMapType = (HdrToneMapType)cbToneMapType.SelectedIndex;
+        }
+
+        private void cbUseWinRTCapture_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.CaptureSettings.UseHDRSupport = cbUseHDR.Checked;
+        }
+
+        private void nudCaptureHDRNits_ValueChanged(object sender, EventArgs e)
+        {
+            TaskSettings.CaptureSettings.HdrSettings.HdrBrightnessNits = (float)nudCaptureHDRNits.Value;
+        }
+
+        private void nudCaptureBrightnessScale_ValueChanged(object sender, EventArgs e)
+        {
+            TaskSettings.CaptureSettings.HdrSettings.BrightnessScale = (float)nudCaptureBrightnessScale.Value;
+        }
+
+        private void nudCaptureSDRScale_ValueChanged(object sender, EventArgs e)
+        {
+            TaskSettings.CaptureSettings.HdrSettings.SdrWhiteScale = (float)nudCaptureSDRScale.Value;
+        }
+
+        private void cbUse99ThPercentileMaxCll_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.CaptureSettings.HdrSettings.Use99ThPercentileMaxCll = cbUse99ThPercentileMaxCll.Checked;
+        }
+
+        #endregion HDR
 
         #endregion Capture
 
@@ -1861,25 +1888,5 @@ namespace ShareX
         }
 
         #endregion Advanced
-
-        private void nudCaptureHDRNits_ValueChanged(object sender, EventArgs e)
-        {
-            TaskSettings.CaptureSettings.HdrSettings.HdrBrightnessNits = (float)nudCaptureHDRNits.Value;
-        }
-
-        private void nudCaptureBrightnessScale_ValueChanged(object sender, EventArgs e)
-        {
-            TaskSettings.CaptureSettings.HdrSettings.BrightnessScale = (float)nudCaptureBrightnessScale.Value;
-        }
-
-        private void nudCaptureSDRScale_ValueChanged(object sender, EventArgs e)
-        {
-            TaskSettings.CaptureSettings.HdrSettings.SdrWhiteScale = (float)nudCaptureSDRScale.Value;
-        }
-
-        private void cbUse99ThPercentileMaxCll_CheckedChanged(object sender, EventArgs e)
-        {
-            TaskSettings.CaptureSettings.HdrSettings.Use99ThPercentileMaxCll = cbUse99ThPercentileMaxCll.Checked;
-        }
     }
 }
