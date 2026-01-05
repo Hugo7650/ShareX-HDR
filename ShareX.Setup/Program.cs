@@ -247,7 +247,7 @@ namespace ShareX.Setup
             }
             else
             {
-                Configuration = "Release\\win-x64";
+                Configuration = "Release";
             }
 
             Console.WriteLine("Configuration: " + Configuration);
