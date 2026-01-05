@@ -9,6 +9,7 @@ using SharpGen.Runtime;
 using Vortice.Direct3D;
 using Vortice.Direct3D11;
 using Vortice.DXGI;
+using Vortice.DXGI.Debug;
 using Vortice.Mathematics;
 
 namespace ShareX.ScreenCaptureLib.AdvancedGraphics.Direct3D;
@@ -246,10 +247,6 @@ public class ModernCapture : IDisposable, DisposableCache
             {
                 throw new Exception("💀 We currently don't support screenshots across multiple GPUs");
             }
-#if DEBUG
-            var loaded = RenderDoc.Load(out var lib);
-            if (loaded && lib != null) lib.StartFrameCapture();
-#endif
 
             // (B) If GPU composition is allowed, create one big GPU canvas now:
             ID3D11Texture2D canvasGpu = null;
@@ -366,9 +363,6 @@ public class ModernCapture : IDisposable, DisposableCache
 
             canvasGpu.Dispose();
             stagingCanvas.Dispose();
-#if DEBUG
-            if (loaded && lib != null) lib.EndFrameCapture();
-#endif
             return finalBitmap;
         }
         catch (Exception e)
