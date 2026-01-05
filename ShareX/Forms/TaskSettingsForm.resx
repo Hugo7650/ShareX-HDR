@@ -151,7 +151,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbOverrideAfterCaptureSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 96</value>
+    <value>10, 120</value>
+  </data>
+  <data name="cbOverrideAfterCaptureSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbOverrideAfterCaptureSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 19</value>
@@ -181,7 +184,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbOverrideAfterUploadSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 152</value>
+    <value>10, 190</value>
+  </data>
+  <data name="cbOverrideAfterUploadSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbOverrideAfterUploadSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 19</value>
@@ -211,7 +217,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbOverrideDestinationSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 208</value>
+    <value>10, 260</value>
+  </data>
+  <data name="cbOverrideDestinationSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbOverrideDestinationSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 19</value>
@@ -241,7 +250,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 53</value>
+    <value>6, 66</value>
+  </data>
+  <data name="lblDescription.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 15</value>
@@ -265,7 +277,10 @@
     <value>16</value>
   </data>
   <data name="tbDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 69</value>
+    <value>10, 86</value>
+  </data>
+  <data name="tbDescription.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tbDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>552, 23</value>
@@ -304,7 +319,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblTask.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 8</value>
+    <value>6, 10</value>
+  </data>
+  <data name="lblTask.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblTask.Size" type="System.Drawing.Size, System.Drawing">
     <value>33, 15</value>
@@ -331,10 +349,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnScreenshotsFolderBrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>464, 399</value>
+    <value>580, 499</value>
+  </data>
+  <data name="btnScreenshotsFolderBrowse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnScreenshotsFolderBrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 23</value>
+    <value>120, 29</value>
   </data>
   <data name="btnScreenshotsFolderBrowse.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -355,7 +376,10 @@
     <value>1</value>
   </data>
   <data name="txtScreenshotsFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 400</value>
+    <value>10, 500</value>
+  </data>
+  <data name="txtScreenshotsFolder.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtScreenshotsFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>448, 23</value>
@@ -382,7 +406,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbOverrideScreenshotsFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 376</value>
+    <value>10, 470</value>
+  </data>
+  <data name="cbOverrideScreenshotsFolder.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbOverrideScreenshotsFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 19</value>
@@ -406,7 +433,10 @@
     <value>3</value>
   </data>
   <data name="cbCustomUploaders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 344</value>
+    <value>10, 430</value>
+  </data>
+  <data name="cbCustomUploaders.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbCustomUploaders.Size" type="System.Drawing.Size, System.Drawing">
     <value>552, 23</value>
@@ -433,7 +463,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbOverrideCustomUploader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 320</value>
+    <value>10, 400</value>
+  </data>
+  <data name="cbOverrideCustomUploader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbOverrideCustomUploader.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 19</value>
@@ -463,7 +496,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbOverrideFTPAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 264</value>
+    <value>10, 330</value>
+  </data>
+  <data name="cbOverrideFTPAccount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbOverrideFTPAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 19</value>
@@ -487,7 +523,10 @@
     <value>6</value>
   </data>
   <data name="cbFTPAccounts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 288</value>
+    <value>10, 360</value>
+  </data>
+  <data name="cbFTPAccounts.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbFTPAccounts.Size" type="System.Drawing.Size, System.Drawing">
     <value>552, 23</value>
@@ -511,10 +550,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnAfterCapture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 120</value>
+    <value>10, 150</value>
+  </data>
+  <data name="btnAfterCapture.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnAfterCapture.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 24</value>
+    <value>690, 30</value>
   </data>
   <data name="btnAfterCapture.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -541,10 +583,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnAfterUpload.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 176</value>
+    <value>10, 220</value>
+  </data>
+  <data name="btnAfterUpload.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnAfterUpload.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 24</value>
+    <value>690, 30</value>
   </data>
   <data name="btnAfterUpload.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -571,43 +616,46 @@
     <value>NoControl</value>
   </data>
   <data name="btnDestinations.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 232</value>
+    <value>10, 290</value>
+  </data>
+  <data name="btnDestinations.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <metadata name="cmsDestinations.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>396, 17</value>
   </metadata>
   <data name="tsmiImageUploaders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
+    <value>211, 24</value>
   </data>
   <data name="tsmiImageUploaders.Text" xml:space="preserve">
     <value>Image uploaders</value>
   </data>
   <data name="tsmiTextUploaders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
+    <value>211, 24</value>
   </data>
   <data name="tsmiTextUploaders.Text" xml:space="preserve">
     <value>Text uploaders</value>
   </data>
   <data name="tsmiFileUploaders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
+    <value>211, 24</value>
   </data>
   <data name="tsmiFileUploaders.Text" xml:space="preserve">
     <value>File uploaders</value>
   </data>
   <data name="tsmiURLShorteners.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
+    <value>211, 24</value>
   </data>
   <data name="tsmiURLShorteners.Text" xml:space="preserve">
     <value>URL shorteners</value>
   </data>
   <data name="tsmiURLSharingServices.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
+    <value>211, 24</value>
   </data>
   <data name="tsmiURLSharingServices.Text" xml:space="preserve">
     <value>URL sharing services</value>
   </data>
   <data name="cmsDestinations.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 114</value>
+    <value>212, 124</value>
   </data>
   <data name="&gt;&gt;cmsDestinations.Name" xml:space="preserve">
     <value>cmsDestinations</value>
@@ -616,7 +664,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnDestinations.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 24</value>
+    <value>690, 30</value>
   </data>
   <data name="btnDestinations.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -646,10 +694,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnTask.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 24</value>
+    <value>10, 30</value>
+  </data>
+  <data name="btnTask.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnTask.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 24</value>
+    <value>690, 30</value>
   </data>
   <data name="btnTask.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -680,7 +731,7 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tpTask.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpTask.Size" type="System.Drawing.Size, System.Drawing">
     <value>571, 483</value>
@@ -715,8 +766,11 @@
   <data name="cbOverrideGeneralSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="cbOverrideGeneralSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="cbOverrideGeneralSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 0</value>
+    <value>10, 10, 10, 0</value>
   </data>
   <data name="cbOverrideGeneralSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 27</value>
@@ -764,10 +818,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnCustomActionCompletedSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>536, 413</value>
+    <value>670, 516</value>
+  </data>
+  <data name="btnCustomActionCompletedSoundPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnCustomActionCompletedSoundPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
+    <value>32, 29</value>
   </data>
   <data name="btnCustomActionCompletedSoundPath.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -789,7 +846,10 @@
     <value>0</value>
   </data>
   <data name="txtCustomActionCompletedSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 414</value>
+    <value>310, 518</value>
+  </data>
+  <data name="txtCustomActionCompletedSoundPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtCustomActionCompletedSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 23</value>
@@ -816,7 +876,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbUseCustomActionCompletedSound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 416</value>
+    <value>10, 520</value>
+  </data>
+  <data name="cbUseCustomActionCompletedSound.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbUseCustomActionCompletedSound.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 19</value>
@@ -846,7 +909,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbPlaySoundAfterAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 56</value>
+    <value>10, 70</value>
+  </data>
+  <data name="cbPlaySoundAfterAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbPlaySoundAfterAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>218, 19</value>
@@ -876,7 +942,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbShowToastNotificationAfterTaskCompleted.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 80</value>
+    <value>10, 100</value>
+  </data>
+  <data name="cbShowToastNotificationAfterTaskCompleted.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbShowToastNotificationAfterTaskCompleted.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 19</value>
@@ -903,10 +972,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnCustomErrorSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>536, 437</value>
+    <value>670, 546</value>
+  </data>
+  <data name="btnCustomErrorSoundPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnCustomErrorSoundPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
+    <value>32, 29</value>
   </data>
   <data name="btnCustomErrorSoundPath.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -931,10 +1003,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnCustomTaskCompletedSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>536, 389</value>
+    <value>670, 486</value>
+  </data>
+  <data name="btnCustomTaskCompletedSoundPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnCustomTaskCompletedSoundPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
+    <value>32, 29</value>
   </data>
   <data name="btnCustomTaskCompletedSoundPath.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -959,10 +1034,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnCustomCaptureSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>536, 365</value>
+    <value>670, 456</value>
+  </data>
+  <data name="btnCustomCaptureSoundPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnCustomCaptureSoundPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
+    <value>32, 29</value>
   </data>
   <data name="btnCustomCaptureSoundPath.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -984,7 +1062,10 @@
     <value>7</value>
   </data>
   <data name="txtCustomErrorSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 438</value>
+    <value>310, 548</value>
+  </data>
+  <data name="txtCustomErrorSoundPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtCustomErrorSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 23</value>
@@ -1005,7 +1086,10 @@
     <value>8</value>
   </data>
   <data name="txtCustomTaskCompletedSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 390</value>
+    <value>310, 488</value>
+  </data>
+  <data name="txtCustomTaskCompletedSoundPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtCustomTaskCompletedSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 23</value>
@@ -1026,7 +1110,10 @@
     <value>9</value>
   </data>
   <data name="txtCustomCaptureSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 366</value>
+    <value>310, 458</value>
+  </data>
+  <data name="txtCustomCaptureSoundPath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtCustomCaptureSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 23</value>
@@ -1053,7 +1140,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbUseCustomErrorSound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 440</value>
+    <value>10, 550</value>
+  </data>
+  <data name="cbUseCustomErrorSound.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbUseCustomErrorSound.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 19</value>
@@ -1083,7 +1173,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbUseCustomTaskCompletedSound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 392</value>
+    <value>10, 490</value>
+  </data>
+  <data name="cbUseCustomTaskCompletedSound.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbUseCustomTaskCompletedSound.Size" type="System.Drawing.Size, System.Drawing">
     <value>211, 19</value>
@@ -1113,7 +1206,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbUseCustomCaptureSound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 368</value>
+    <value>10, 460</value>
+  </data>
+  <data name="cbUseCustomCaptureSound.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbUseCustomCaptureSound.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 19</value>
@@ -1143,7 +1239,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbToastWindowAutoHide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 192</value>
+    <value>20, 240</value>
+  </data>
+  <data name="cbToastWindowAutoHide.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbToastWindowAutoHide.Size" type="System.Drawing.Size, System.Drawing">
     <value>223, 19</value>
@@ -1173,7 +1272,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowFadeDurationSeconds.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 48</value>
+    <value>296, 60</value>
+  </data>
+  <data name="lblToastWindowFadeDurationSeconds.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowFadeDurationSeconds.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 15</value>
@@ -1203,7 +1305,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowDurationSeconds.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 24</value>
+    <value>296, 30</value>
+  </data>
+  <data name="lblToastWindowDurationSeconds.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowDurationSeconds.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 15</value>
@@ -1233,7 +1338,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowSizeX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>263, 95</value>
+    <value>329, 119</value>
+  </data>
+  <data name="lblToastWindowSizeX.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowSizeX.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 15</value>
@@ -1258,7 +1366,10 @@
     <value>3</value>
   </data>
   <data name="cbToastWindowMiddleClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 164</value>
+    <value>220, 205</value>
+  </data>
+  <data name="cbToastWindowMiddleClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbToastWindowMiddleClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 23</value>
@@ -1279,7 +1390,10 @@
     <value>4</value>
   </data>
   <data name="cbToastWindowRightClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 140</value>
+    <value>220, 175</value>
+  </data>
+  <data name="cbToastWindowRightClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbToastWindowRightClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 23</value>
@@ -1300,7 +1414,10 @@
     <value>5</value>
   </data>
   <data name="cbToastWindowLeftClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 116</value>
+    <value>220, 145</value>
+  </data>
+  <data name="cbToastWindowLeftClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbToastWindowLeftClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 23</value>
@@ -1321,7 +1438,10 @@
     <value>6</value>
   </data>
   <data name="nudToastWindowSizeHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 92</value>
+    <value>350, 115</value>
+  </data>
+  <data name="nudToastWindowSizeHeight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudToastWindowSizeHeight.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 23</value>
@@ -1345,7 +1465,10 @@
     <value>7</value>
   </data>
   <data name="nudToastWindowSizeWidth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 92</value>
+    <value>220, 115</value>
+  </data>
+  <data name="nudToastWindowSizeWidth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudToastWindowSizeWidth.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 23</value>
@@ -1369,7 +1492,10 @@
     <value>8</value>
   </data>
   <data name="cbToastWindowPlacement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 68</value>
+    <value>220, 85</value>
+  </data>
+  <data name="cbToastWindowPlacement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbToastWindowPlacement.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 23</value>
@@ -1390,7 +1516,10 @@
     <value>9</value>
   </data>
   <data name="nudToastWindowFadeDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 44</value>
+    <value>220, 55</value>
+  </data>
+  <data name="nudToastWindowFadeDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudToastWindowFadeDuration.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 23</value>
@@ -1420,7 +1549,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbDisableNotificationsOnFullscreen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 216</value>
+    <value>20, 270</value>
+  </data>
+  <data name="cbDisableNotificationsOnFullscreen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbDisableNotificationsOnFullscreen.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 19</value>
@@ -1444,7 +1576,10 @@
     <value>11</value>
   </data>
   <data name="nudToastWindowDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 20</value>
+    <value>220, 25</value>
+  </data>
+  <data name="nudToastWindowDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudToastWindowDuration.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 23</value>
@@ -1474,7 +1609,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowMiddleClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 168</value>
+    <value>16, 210</value>
+  </data>
+  <data name="lblToastWindowMiddleClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowMiddleClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 15</value>
@@ -1504,7 +1642,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowRightClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 144</value>
+    <value>16, 180</value>
+  </data>
+  <data name="lblToastWindowRightClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowRightClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 15</value>
@@ -1534,7 +1675,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowLeftClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 120</value>
+    <value>16, 150</value>
+  </data>
+  <data name="lblToastWindowLeftClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowLeftClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 15</value>
@@ -1564,7 +1708,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 96</value>
+    <value>16, 120</value>
+  </data>
+  <data name="lblToastWindowSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 15</value>
@@ -1594,7 +1741,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowPlacement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 72</value>
+    <value>16, 90</value>
+  </data>
+  <data name="lblToastWindowPlacement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowPlacement.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 15</value>
@@ -1624,7 +1774,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowFadeDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 48</value>
+    <value>16, 60</value>
+  </data>
+  <data name="lblToastWindowFadeDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowFadeDuration.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 15</value>
@@ -1654,7 +1807,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToastWindowDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 24</value>
+    <value>16, 30</value>
+  </data>
+  <data name="lblToastWindowDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToastWindowDuration.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 15</value>
@@ -1678,10 +1834,16 @@
     <value>19</value>
   </data>
   <data name="gbToastWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 104</value>
+    <value>10, 130</value>
+  </data>
+  <data name="gbToastWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="gbToastWindow.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="gbToastWindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 248</value>
+    <value>690, 310</value>
   </data>
   <data name="gbToastWindow.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1708,7 +1870,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbPlaySoundAfterCapture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
+    <value>10, 10</value>
+  </data>
+  <data name="cbPlaySoundAfterCapture.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbPlaySoundAfterCapture.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 19</value>
@@ -1738,7 +1903,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbPlaySoundAfterUpload.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 32</value>
+    <value>10, 40</value>
+  </data>
+  <data name="cbPlaySoundAfterUpload.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbPlaySoundAfterUpload.Size" type="System.Drawing.Size, System.Drawing">
     <value>206, 19</value>
@@ -1765,7 +1933,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpNotifications.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpNotifications.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 451</value>
@@ -1792,7 +1960,10 @@
     <value>Fill</value>
   </data>
   <data name="tcGeneral.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 4</value>
+  </data>
+  <data name="tcGeneral.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tcGeneral.Size" type="System.Drawing.Size, System.Drawing">
     <value>565, 477</value>
@@ -1816,7 +1987,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpGeneral.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpGeneral.Size" type="System.Drawing.Size, System.Drawing">
     <value>571, 483</value>
@@ -1846,7 +2017,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbImageAutoJPEGQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 256</value>
+    <value>10, 320</value>
+  </data>
+  <data name="cbImageAutoJPEGQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbImageAutoJPEGQuality.Size" type="System.Drawing.Size, System.Drawing">
     <value>442, 19</value>
@@ -1870,7 +2044,10 @@
     <value>0</value>
   </data>
   <data name="cbImagePNGBitDepth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 72</value>
+    <value>10, 90</value>
+  </data>
+  <data name="cbImagePNGBitDepth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbImagePNGBitDepth.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 23</value>
@@ -1897,7 +2074,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblImagePNGBitDepth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 56</value>
+    <value>6, 70</value>
+  </data>
+  <data name="lblImagePNGBitDepth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblImagePNGBitDepth.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 15</value>
@@ -1927,7 +2107,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbImageAutoUseJPEG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 200</value>
+    <value>10, 250</value>
+  </data>
+  <data name="cbImageAutoUseJPEG.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbImageAutoUseJPEG.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 19</value>
@@ -1957,7 +2140,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblImageFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 8</value>
+    <value>6, 10</value>
+  </data>
+  <data name="lblImageFormat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblImageFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 15</value>
@@ -1981,7 +2167,10 @@
     <value>4</value>
   </data>
   <data name="cbImageFileExist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 296</value>
+    <value>10, 370</value>
+  </data>
+  <data name="cbImageFileExist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbImageFileExist.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 23</value>
@@ -2008,7 +2197,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblImageFileExist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 280</value>
+    <value>6, 350</value>
+  </data>
+  <data name="lblImageFileExist.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblImageFileExist.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 15</value>
@@ -2032,7 +2224,10 @@
     <value>6</value>
   </data>
   <data name="nudImageAutoUseJPEGSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 224</value>
+    <value>10, 280</value>
+  </data>
+  <data name="nudImageAutoUseJPEGSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudImageAutoUseJPEGSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 23</value>
@@ -2062,7 +2257,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblImageSizeLimitHint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 228</value>
+    <value>106, 285</value>
+  </data>
+  <data name="lblImageSizeLimitHint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblImageSizeLimitHint.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 15</value>
@@ -2086,7 +2284,10 @@
     <value>8</value>
   </data>
   <data name="nudImageJPEGQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 120</value>
+    <value>10, 150</value>
+  </data>
+  <data name="nudImageJPEGQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudImageJPEGQuality.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 23</value>
@@ -2110,7 +2311,10 @@
     <value>9</value>
   </data>
   <data name="cbImageFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 24</value>
+    <value>10, 30</value>
+  </data>
+  <data name="cbImageFormat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbImageFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -2137,7 +2341,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblImageJPEGQualityHint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 124</value>
+    <value>76, 155</value>
+  </data>
+  <data name="lblImageJPEGQualityHint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblImageJPEGQualityHint.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 15</value>
@@ -2168,7 +2375,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblImageGIFQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 152</value>
+    <value>6, 190</value>
+  </data>
+  <data name="lblImageGIFQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblImageGIFQuality.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 15</value>
@@ -2198,7 +2408,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblImageJPEGQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 104</value>
+    <value>6, 130</value>
+  </data>
+  <data name="lblImageJPEGQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblImageJPEGQuality.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 15</value>
@@ -2222,7 +2435,10 @@
     <value>13</value>
   </data>
   <data name="cbImageGIFQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 168</value>
+    <value>10, 210</value>
+  </data>
+  <data name="cbImageGIFQuality.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbImageGIFQuality.Size" type="System.Drawing.Size, System.Drawing">
     <value>360, 23</value>
@@ -2278,8 +2494,11 @@
   <data name="cbOverrideImageSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="cbOverrideImageSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="cbOverrideImageSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 0</value>
+    <value>10, 10, 10, 0</value>
   </data>
   <data name="cbOverrideImageSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 27</value>
@@ -2330,7 +2549,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbUseRandomImageEffect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 112</value>
+    <value>10, 140</value>
+  </data>
+  <data name="cbUseRandomImageEffect.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbUseRandomImageEffect.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 19</value>
@@ -2360,7 +2582,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblImageEffectsNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 8</value>
+    <value>6, 10</value>
+  </data>
+  <data name="lblImageEffectsNote.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblImageEffectsNote.Size" type="System.Drawing.Size, System.Drawing">
     <value>493, 15</value>
@@ -2390,7 +2615,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbShowImageEffectsWindowAfterCapture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 64</value>
+    <value>10, 80</value>
+  </data>
+  <data name="cbShowImageEffectsWindowAfterCapture.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbShowImageEffectsWindowAfterCapture.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 19</value>
@@ -2420,7 +2648,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbImageEffectOnlyRegionCapture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 88</value>
+    <value>10, 110</value>
+  </data>
+  <data name="cbImageEffectOnlyRegionCapture.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbImageEffectOnlyRegionCapture.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 19</value>
@@ -2447,10 +2678,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnImageEffects.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 32</value>
+    <value>10, 40</value>
+  </data>
+  <data name="btnImageEffects.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnImageEffects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 23</value>
+    <value>260, 29</value>
   </data>
   <data name="btnImageEffects.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2474,7 +2708,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpEffects.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpEffects.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 451</value>
@@ -2504,7 +2738,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbThumbnailIfSmaller.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 152</value>
+    <value>14, 190</value>
+  </data>
+  <data name="cbThumbnailIfSmaller.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbThumbnailIfSmaller.Size" type="System.Drawing.Size, System.Drawing">
     <value>367, 19</value>
@@ -2534,7 +2771,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblThumbnailNamePreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 124</value>
+    <value>184, 155</value>
+  </data>
+  <data name="lblThumbnailNamePreview.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblThumbnailNamePreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 15</value>
@@ -2564,7 +2804,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblThumbnailName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 104</value>
+    <value>10, 130</value>
+  </data>
+  <data name="lblThumbnailName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblThumbnailName.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 15</value>
@@ -2588,7 +2831,10 @@
     <value>2</value>
   </data>
   <data name="txtThumbnailName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 120</value>
+    <value>14, 150</value>
+  </data>
+  <data name="txtThumbnailName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtThumbnailName.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 23</value>
@@ -2615,7 +2861,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblThumbnailHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 56</value>
+    <value>10, 70</value>
+  </data>
+  <data name="lblThumbnailHeight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblThumbnailHeight.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 15</value>
@@ -2645,7 +2894,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblThumbnailWidth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
+    <value>10, 10</value>
+  </data>
+  <data name="lblThumbnailWidth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblThumbnailWidth.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 15</value>
@@ -2669,7 +2921,10 @@
     <value>5</value>
   </data>
   <data name="nudThumbnailHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 72</value>
+    <value>14, 90</value>
+  </data>
+  <data name="nudThumbnailHeight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudThumbnailHeight.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -2693,7 +2948,10 @@
     <value>6</value>
   </data>
   <data name="nudThumbnailWidth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 24</value>
+    <value>14, 30</value>
+  </data>
+  <data name="nudThumbnailWidth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudThumbnailWidth.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -2720,7 +2978,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpThumbnail.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpThumbnail.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 451</value>
@@ -2747,7 +3005,10 @@
     <value>Fill</value>
   </data>
   <data name="tcImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 4</value>
+  </data>
+  <data name="tcImage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tcImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>565, 477</value>
@@ -2771,7 +3032,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpImage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>571, 483</value>
@@ -2820,6 +3081,276 @@
   </data>
   <data name="&gt;&gt;cbCaptureAutoHideDesktopIcons.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="lblCaptureToneMapType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCaptureToneMapType.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCaptureToneMapType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 430</value>
+  </data>
+  <data name="lblCaptureToneMapType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 15</value>
+  </data>
+  <data name="lblCaptureToneMapType.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="lblCaptureToneMapType.Text" xml:space="preserve">
+    <value>HDR Tone Map Mode</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureToneMapType.Name" xml:space="preserve">
+    <value>lblCaptureToneMapType</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureToneMapType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureToneMapType.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureToneMapType.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbToneMapType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>420, 450</value>
+  </data>
+  <data name="cbToneMapType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="cbToneMapType.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;cbToneMapType.Name" xml:space="preserve">
+    <value>cbToneMapType</value>
+  </data>
+  <data name="&gt;&gt;cbToneMapType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbToneMapType.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;cbToneMapType.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbUse99ThPercentileMaxCll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbUse99ThPercentileMaxCll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbUse99ThPercentileMaxCll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 410</value>
+  </data>
+  <data name="cbUse99ThPercentileMaxCll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 19</value>
+  </data>
+  <data name="cbUse99ThPercentileMaxCll.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="cbUse99ThPercentileMaxCll.Text" xml:space="preserve">
+    <value>Limit max HDR light</value>
+  </data>
+  <data name="&gt;&gt;cbUse99ThPercentileMaxCll.Name" xml:space="preserve">
+    <value>cbUse99ThPercentileMaxCll</value>
+  </data>
+  <data name="&gt;&gt;cbUse99ThPercentileMaxCll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbUse99ThPercentileMaxCll.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;cbUse99ThPercentileMaxCll.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblCaptureSDRScale.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCaptureSDRScale.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCaptureSDRScale.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 430</value>
+  </data>
+  <data name="lblCaptureSDRScale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 15</value>
+  </data>
+  <data name="lblCaptureSDRScale.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="lblCaptureSDRScale.Text" xml:space="preserve">
+    <value>SDR White Level</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureSDRScale.Name" xml:space="preserve">
+    <value>lblCaptureSDRScale</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureSDRScale.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureSDRScale.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureSDRScale.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="nudCaptureSDRScale.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 450</value>
+  </data>
+  <data name="nudCaptureSDRScale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 23</value>
+  </data>
+  <data name="nudCaptureSDRScale.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="nudCaptureSDRScale.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureSDRScale.Name" xml:space="preserve">
+    <value>nudCaptureSDRScale</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureSDRScale.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureSDRScale.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureSDRScale.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblCaptureBrightnessScale.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCaptureBrightnessScale.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCaptureBrightnessScale.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 430</value>
+  </data>
+  <data name="lblCaptureBrightnessScale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 15</value>
+  </data>
+  <data name="lblCaptureBrightnessScale.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="lblCaptureBrightnessScale.Text" xml:space="preserve">
+    <value>Brightness Scale: </value>
+  </data>
+  <data name="&gt;&gt;lblCaptureBrightnessScale.Name" xml:space="preserve">
+    <value>lblCaptureBrightnessScale</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureBrightnessScale.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureBrightnessScale.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureBrightnessScale.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="nudCaptureBrightnessScale.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 450</value>
+  </data>
+  <data name="nudCaptureBrightnessScale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 23</value>
+  </data>
+  <data name="nudCaptureBrightnessScale.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="nudCaptureBrightnessScale.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureBrightnessScale.Name" xml:space="preserve">
+    <value>nudCaptureBrightnessScale</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureBrightnessScale.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureBrightnessScale.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureBrightnessScale.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblCaptureHdrNits.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCaptureHdrNits.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblCaptureHdrNits.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 430</value>
+  </data>
+  <data name="lblCaptureHdrNits.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 15</value>
+  </data>
+  <data name="lblCaptureHdrNits.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="lblCaptureHdrNits.Text" xml:space="preserve">
+    <value>HDR Brightness Nits: </value>
+  </data>
+  <data name="&gt;&gt;lblCaptureHdrNits.Name" xml:space="preserve">
+    <value>lblCaptureHdrNits</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureHdrNits.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureHdrNits.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;lblCaptureHdrNits.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="nudCaptureHDRNits.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 450</value>
+  </data>
+  <data name="nudCaptureHDRNits.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 23</value>
+  </data>
+  <data name="nudCaptureHDRNits.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="nudCaptureHDRNits.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureHDRNits.Name" xml:space="preserve">
+    <value>nudCaptureHDRNits</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureHDRNits.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureHDRNits.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;nudCaptureHDRNits.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cbUseHDR.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbUseHDR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 410</value>
+  </data>
+  <data name="cbUseHDR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 19</value>
+  </data>
+  <data name="cbUseHDR.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="cbUseHDR.Text" xml:space="preserve">
+    <value>HDR support</value>
+  </data>
+  <data name="&gt;&gt;cbUseHDR.Name" xml:space="preserve">
+    <value>cbUseHDR</value>
+  </data>
+  <data name="&gt;&gt;cbUseHDR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbUseHDR.Parent" xml:space="preserve">
+    <value>pCapture</value>
+  </data>
+  <data name="&gt;&gt;cbUseHDR.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="txtCaptureCustomWindow.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 328</value>
@@ -2879,7 +3410,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblScreenshotDelay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 30</value>
+    <value>6, 38</value>
+  </data>
+  <data name="lblScreenshotDelay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblScreenshotDelay.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 15</value>
@@ -2909,7 +3443,7 @@
     <value>232, 279</value>
   </data>
   <data name="btnCaptureCustomRegionSelectRectangle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 23</value>
+    <value>170, 29</value>
   </data>
   <data name="btnCaptureCustomRegionSelectRectangle.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -3172,7 +3706,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbShowCursor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
+    <value>10, 10</value>
+  </data>
+  <data name="cbShowCursor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbShowCursor.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 19</value>
@@ -3202,7 +3739,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblCaptureShadowOffset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 126</value>
+    <value>6, 158</value>
+  </data>
+  <data name="lblCaptureShadowOffset.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblCaptureShadowOffset.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 15</value>
@@ -3232,7 +3772,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbCaptureTransparent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 80</value>
+    <value>10, 100</value>
+  </data>
+  <data name="cbCaptureTransparent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbCaptureTransparent.Size" type="System.Drawing.Size, System.Drawing">
     <value>210, 19</value>
@@ -3292,7 +3835,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbCaptureShadow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 104</value>
+    <value>10, 130</value>
+  </data>
+  <data name="cbCaptureShadow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbCaptureShadow.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 19</value>
@@ -3322,7 +3868,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblScreenshotDelayInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 52</value>
+    <value>90, 65</value>
+  </data>
+  <data name="lblScreenshotDelayInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblScreenshotDelayInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 15</value>
@@ -3352,7 +3901,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbCaptureClientArea.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 176</value>
+    <value>10, 220</value>
+  </data>
+  <data name="cbCaptureClientArea.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbCaptureClientArea.Size" type="System.Drawing.Size, System.Drawing">
     <value>372, 19</value>
@@ -3376,7 +3928,10 @@
     <value>20</value>
   </data>
   <data name="nudScreenshotDelay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 48</value>
+    <value>10, 60</value>
+  </data>
+  <data name="nudScreenshotDelay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudScreenshotDelay.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 23</value>
@@ -3400,7 +3955,10 @@
     <value>21</value>
   </data>
   <data name="nudCaptureShadowOffset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 144</value>
+    <value>10, 180</value>
+  </data>
+  <data name="nudCaptureShadowOffset.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudCaptureShadowOffset.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 23</value>
@@ -3459,8 +4017,11 @@
   <data name="cbOverrideCaptureSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="cbOverrideCaptureSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="cbOverrideCaptureSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 0</value>
+    <value>10, 10, 10, 0</value>
   </data>
   <data name="cbOverrideCaptureSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 27</value>
@@ -3511,7 +4072,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureBackgroundDimStrengthHint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 176</value>
+    <value>456, 220</value>
+  </data>
+  <data name="lblRegionCaptureBackgroundDimStrengthHint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureBackgroundDimStrengthHint.Size" type="System.Drawing.Size, System.Drawing">
     <value>17, 15</value>
@@ -3536,7 +4100,10 @@
     <value>0</value>
   </data>
   <data name="nudRegionCaptureBackgroundDimStrength.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 172</value>
+    <value>390, 215</value>
+  </data>
+  <data name="nudRegionCaptureBackgroundDimStrength.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudRegionCaptureBackgroundDimStrength.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 23</value>
@@ -3566,7 +4133,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureBackgroundDimStrength.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 176</value>
+    <value>6, 220</value>
+  </data>
+  <data name="lblRegionCaptureBackgroundDimStrength.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureBackgroundDimStrength.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 15</value>
@@ -3596,7 +4166,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureActiveMonitorMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 464</value>
+    <value>10, 580</value>
+  </data>
+  <data name="cbRegionCaptureActiveMonitorMode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureActiveMonitorMode.Size" type="System.Drawing.Size, System.Drawing">
     <value>340, 19</value>
@@ -3620,7 +4193,10 @@
     <value>3</value>
   </data>
   <data name="nudRegionCaptureFPSLimit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 436</value>
+    <value>390, 545</value>
+  </data>
+  <data name="nudRegionCaptureFPSLimit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudRegionCaptureFPSLimit.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -3650,7 +4226,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureFPSLimit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 440</value>
+    <value>6, 550</value>
+  </data>
+  <data name="lblRegionCaptureFPSLimit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureFPSLimit.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 15</value>
@@ -3680,7 +4259,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureShowFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 416</value>
+    <value>10, 520</value>
+  </data>
+  <data name="cbRegionCaptureShowFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureShowFPS.Size" type="System.Drawing.Size, System.Drawing">
     <value>77, 19</value>
@@ -3782,7 +4364,7 @@
     <value>115, 7</value>
   </data>
   <data name="lblRegionCaptureFixedSizeHeight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 0, 0</value>
+    <value>4, 0, 0, 0</value>
   </data>
   <data name="lblRegionCaptureFixedSizeHeight.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 15</value>
@@ -3830,7 +4412,10 @@
     <value>3</value>
   </data>
   <data name="flpRegionCaptureFixedSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 387</value>
+    <value>390, 484</value>
+  </data>
+  <data name="flpRegionCaptureFixedSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="flpRegionCaptureFixedSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 29</value>
@@ -3860,7 +4445,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureIsFixedSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 392</value>
+    <value>10, 490</value>
+  </data>
+  <data name="cbRegionCaptureIsFixedSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureIsFixedSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 19</value>
@@ -3890,7 +4478,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureShowCrosshair.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 368</value>
+    <value>10, 460</value>
+  </data>
+  <data name="cbRegionCaptureShowCrosshair.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureShowCrosshair.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 19</value>
@@ -3920,7 +4511,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureMagnifierPixelSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 344</value>
+    <value>6, 430</value>
+  </data>
+  <data name="lblRegionCaptureMagnifierPixelSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureMagnifierPixelSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 15</value>
@@ -3950,7 +4544,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureMagnifierPixelCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 320</value>
+    <value>6, 400</value>
+  </data>
+  <data name="lblRegionCaptureMagnifierPixelCount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureMagnifierPixelCount.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 15</value>
@@ -3980,7 +4577,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureUseSquareMagnifier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 296</value>
+    <value>10, 370</value>
+  </data>
+  <data name="cbRegionCaptureUseSquareMagnifier.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureUseSquareMagnifier.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 19</value>
@@ -4010,7 +4610,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureShowMagnifier.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 272</value>
+    <value>10, 340</value>
+  </data>
+  <data name="cbRegionCaptureShowMagnifier.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureShowMagnifier.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 19</value>
@@ -4040,7 +4643,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureShowInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 248</value>
+    <value>10, 310</value>
+  </data>
+  <data name="cbRegionCaptureShowInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureShowInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 19</value>
@@ -4067,10 +4673,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegionCaptureSnapSizesRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>504, 218</value>
+    <value>630, 272</value>
+  </data>
+  <data name="btnRegionCaptureSnapSizesRemove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnRegionCaptureSnapSizesRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>30, 30</value>
   </data>
   <data name="btnRegionCaptureSnapSizesRemove.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -4095,10 +4704,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegionCaptureSnapSizesAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 218</value>
+    <value>600, 272</value>
+  </data>
+  <data name="btnRegionCaptureSnapSizesAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnRegionCaptureSnapSizesAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
+    <value>30, 30</value>
   </data>
   <data name="btnRegionCaptureSnapSizesAdd.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -4120,7 +4732,10 @@
     <value>16</value>
   </data>
   <data name="cbRegionCaptureSnapSizes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 220</value>
+    <value>390, 275</value>
+  </data>
+  <data name="cbRegionCaptureSnapSizes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureSnapSizes.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 23</value>
@@ -4147,7 +4762,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureSnapSizes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 224</value>
+    <value>6, 280</value>
+  </data>
+  <data name="lblRegionCaptureSnapSizes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureSnapSizes.Size" type="System.Drawing.Size, System.Drawing">
     <value>260, 15</value>
@@ -4177,7 +4795,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureUseCustomInfoText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 200</value>
+    <value>10, 250</value>
+  </data>
+  <data name="cbRegionCaptureUseCustomInfoText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureUseCustomInfoText.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 19</value>
@@ -4207,7 +4828,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureDetectControls.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 152</value>
+    <value>10, 190</value>
+  </data>
+  <data name="cbRegionCaptureDetectControls.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureDetectControls.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 19</value>
@@ -4237,7 +4861,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureDetectWindows.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 128</value>
+    <value>10, 160</value>
+  </data>
+  <data name="cbRegionCaptureDetectWindows.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureDetectWindows.Size" type="System.Drawing.Size, System.Drawing">
     <value>313, 19</value>
@@ -4261,7 +4888,10 @@
     <value>21</value>
   </data>
   <data name="cbRegionCaptureMouse5ClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 100</value>
+    <value>390, 125</value>
+  </data>
+  <data name="cbRegionCaptureMouse5ClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureMouse5ClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 23</value>
@@ -4288,7 +4918,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureMouse5ClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 104</value>
+    <value>6, 130</value>
+  </data>
+  <data name="lblRegionCaptureMouse5ClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureMouse5ClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 15</value>
@@ -4312,7 +4945,10 @@
     <value>23</value>
   </data>
   <data name="cbRegionCaptureMouse4ClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 76</value>
+    <value>390, 95</value>
+  </data>
+  <data name="cbRegionCaptureMouse4ClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureMouse4ClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 23</value>
@@ -4339,7 +4975,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureMouse4ClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 80</value>
+    <value>6, 100</value>
+  </data>
+  <data name="lblRegionCaptureMouse4ClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureMouse4ClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 15</value>
@@ -4363,7 +5002,10 @@
     <value>25</value>
   </data>
   <data name="cbRegionCaptureMouseMiddleClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 52</value>
+    <value>390, 65</value>
+  </data>
+  <data name="cbRegionCaptureMouseMiddleClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureMouseMiddleClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 23</value>
@@ -4390,7 +5032,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureMouseMiddleClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 56</value>
+    <value>6, 70</value>
+  </data>
+  <data name="lblRegionCaptureMouseMiddleClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureMouseMiddleClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 15</value>
@@ -4414,7 +5059,10 @@
     <value>27</value>
   </data>
   <data name="cbRegionCaptureMouseRightClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 28</value>
+    <value>390, 35</value>
+  </data>
+  <data name="cbRegionCaptureMouseRightClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureMouseRightClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 23</value>
@@ -4441,7 +5089,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureMouseRightClickAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 32</value>
+    <value>6, 40</value>
+  </data>
+  <data name="lblRegionCaptureMouseRightClickAction.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureMouseRightClickAction.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 15</value>
@@ -4471,7 +5122,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbRegionCaptureMultiRegionMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
+    <value>10, 10</value>
+  </data>
+  <data name="cbRegionCaptureMultiRegionMode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbRegionCaptureMultiRegionMode.Size" type="System.Drawing.Size, System.Drawing">
     <value>410, 19</value>
@@ -4498,10 +5152,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegionCaptureSnapSizesDialogCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 80</value>
+    <value>150, 100</value>
+  </data>
+  <data name="btnRegionCaptureSnapSizesDialogCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnRegionCaptureSnapSizesDialogCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 24</value>
+    <value>130, 30</value>
   </data>
   <data name="btnRegionCaptureSnapSizesDialogCancel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -4525,10 +5182,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegionCaptureSnapSizesDialogAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 80</value>
+    <value>10, 100</value>
+  </data>
+  <data name="btnRegionCaptureSnapSizesDialogAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnRegionCaptureSnapSizesDialogAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 24</value>
+    <value>130, 30</value>
   </data>
   <data name="btnRegionCaptureSnapSizesDialogAdd.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -4549,7 +5209,10 @@
     <value>1</value>
   </data>
   <data name="nudRegionCaptureSnapSizesHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 56</value>
+    <value>150, 70</value>
+  </data>
+  <data name="nudRegionCaptureSnapSizesHeight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudRegionCaptureSnapSizesHeight.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 23</value>
@@ -4579,7 +5242,10 @@
     <value>NoControl</value>
   </data>
   <data name="RegionCaptureSnapSizesHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 40</value>
+    <value>146, 50</value>
+  </data>
+  <data name="RegionCaptureSnapSizesHeight.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="RegionCaptureSnapSizesHeight.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 15</value>
@@ -4603,7 +5269,10 @@
     <value>3</value>
   </data>
   <data name="nudRegionCaptureSnapSizesWidth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 56</value>
+    <value>10, 70</value>
+  </data>
+  <data name="nudRegionCaptureSnapSizesWidth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudRegionCaptureSnapSizesWidth.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 23</value>
@@ -4633,7 +5302,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblRegionCaptureSnapSizesWidth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 40</value>
+    <value>6, 50</value>
+  </data>
+  <data name="lblRegionCaptureSnapSizesWidth.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblRegionCaptureSnapSizesWidth.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 15</value>
@@ -4657,10 +5329,13 @@
     <value>5</value>
   </data>
   <data name="pRegionCaptureSnapSizes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 208</value>
+    <value>380, 260</value>
+  </data>
+  <data name="pRegionCaptureSnapSizes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="pRegionCaptureSnapSizes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 112</value>
+    <value>290, 140</value>
   </data>
   <data name="pRegionCaptureSnapSizes.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -4681,7 +5356,10 @@
     <value>31</value>
   </data>
   <data name="txtRegionCaptureCustomInfoText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 198</value>
+    <value>390, 248</value>
+  </data>
+  <data name="txtRegionCaptureCustomInfoText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtRegionCaptureCustomInfoText.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 23</value>
@@ -4702,7 +5380,10 @@
     <value>32</value>
   </data>
   <data name="nudRegionCaptureMagnifierPixelCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 316</value>
+    <value>390, 395</value>
+  </data>
+  <data name="nudRegionCaptureMagnifierPixelCount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudRegionCaptureMagnifierPixelCount.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -4726,7 +5407,10 @@
     <value>33</value>
   </data>
   <data name="nudRegionCaptureMagnifierPixelSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 340</value>
+    <value>390, 425</value>
+  </data>
+  <data name="nudRegionCaptureMagnifierPixelSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudRegionCaptureMagnifierPixelSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -4753,7 +5437,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpRegionCapture.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpRegionCapture.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 451</value>
@@ -4783,7 +5467,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbScreenRecordTransparentRegion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 200</value>
+    <value>10, 250</value>
+  </data>
+  <data name="cbScreenRecordTransparentRegion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbScreenRecordTransparentRegion.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 19</value>
@@ -4813,7 +5500,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbScreenRecordTwoPassEncoding.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 176</value>
+    <value>10, 220</value>
+  </data>
+  <data name="cbScreenRecordTwoPassEncoding.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbScreenRecordTwoPassEncoding.Size" type="System.Drawing.Size, System.Drawing">
     <value>388, 19</value>
@@ -4843,7 +5533,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbScreenRecordConfirmAbort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 224</value>
+    <value>10, 280</value>
+  </data>
+  <data name="cbScreenRecordConfirmAbort.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbScreenRecordConfirmAbort.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 19</value>
@@ -4873,7 +5566,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbScreenRecorderShowCursor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 104</value>
+    <value>10, 130</value>
+  </data>
+  <data name="cbScreenRecorderShowCursor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbScreenRecorderShowCursor.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 19</value>
@@ -4900,10 +5596,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnScreenRecorderFFmpegOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
+    <value>10, 10</value>
+  </data>
+  <data name="btnScreenRecorderFFmpegOptions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnScreenRecorderFFmpegOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 32</value>
+    <value>310, 40</value>
   </data>
   <data name="btnScreenRecorderFFmpegOptions.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4930,7 +5629,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblScreenRecorderStartDelay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 130</value>
+    <value>380, 162</value>
+  </data>
+  <data name="lblScreenRecorderStartDelay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblScreenRecorderStartDelay.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 15</value>
@@ -4960,7 +5662,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbScreenRecordAutoStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 128</value>
+    <value>10, 160</value>
+  </data>
+  <data name="cbScreenRecordAutoStart.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbScreenRecordAutoStart.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 19</value>
@@ -4990,7 +5695,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblScreenRecorderFixedDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 154</value>
+    <value>380, 192</value>
+  </data>
+  <data name="lblScreenRecorderFixedDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblScreenRecorderFixedDuration.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 15</value>
@@ -5014,7 +5722,10 @@
     <value>7</value>
   </data>
   <data name="nudScreenRecordFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 52</value>
+    <value>290, 65</value>
+  </data>
+  <data name="nudScreenRecordFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudScreenRecordFPS.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -5044,7 +5755,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblScreenRecordFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 56</value>
+    <value>10, 70</value>
+  </data>
+  <data name="lblScreenRecordFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblScreenRecordFPS.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 15</value>
@@ -5068,7 +5782,10 @@
     <value>9</value>
   </data>
   <data name="nudScreenRecorderDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 150</value>
+    <value>290, 188</value>
+  </data>
+  <data name="nudScreenRecorderDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudScreenRecorderDuration.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -5092,7 +5809,10 @@
     <value>10</value>
   </data>
   <data name="nudScreenRecorderStartDelay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 126</value>
+    <value>290, 158</value>
+  </data>
+  <data name="nudScreenRecorderStartDelay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudScreenRecorderStartDelay.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -5122,7 +5842,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbScreenRecorderFixedDuration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 152</value>
+    <value>10, 190</value>
+  </data>
+  <data name="cbScreenRecorderFixedDuration.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbScreenRecorderFixedDuration.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 19</value>
@@ -5146,7 +5869,10 @@
     <value>12</value>
   </data>
   <data name="nudGIFFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 76</value>
+    <value>290, 95</value>
+  </data>
+  <data name="nudGIFFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudGIFFPS.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 23</value>
@@ -5176,7 +5902,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblGIFFPS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 80</value>
+    <value>10, 100</value>
+  </data>
+  <data name="lblGIFFPS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblGIFFPS.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 15</value>
@@ -5203,7 +5932,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpScreenRecorder.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpScreenRecorder.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 451</value>
@@ -5230,10 +5959,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnCaptureOCRHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 21</value>
+    <value>280, 26</value>
+  </data>
+  <data name="btnCaptureOCRHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnCaptureOCRHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 26</value>
+    <value>32, 32</value>
   </data>
   <data name="btnCaptureOCRHelp.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -5257,7 +5989,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbCaptureOCRAutoCopy.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 80</value>
+    <value>10, 100</value>
+  </data>
+  <data name="cbCaptureOCRAutoCopy.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbCaptureOCRAutoCopy.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 19</value>
@@ -5287,7 +6022,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbCloseWindowAfterOpenServiceLink.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 103</value>
+    <value>10, 129</value>
+  </data>
+  <data name="cbCloseWindowAfterOpenServiceLink.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbCloseWindowAfterOpenServiceLink.Size" type="System.Drawing.Size, System.Drawing">
     <value>262, 19</value>
@@ -5317,7 +6055,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbCaptureOCRSilent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 56</value>
+    <value>10, 70</value>
+  </data>
+  <data name="cbCaptureOCRSilent.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbCaptureOCRSilent.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 19</value>
@@ -5347,7 +6088,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblOCRDefaultLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 8</value>
+    <value>6, 10</value>
+  </data>
+  <data name="lblOCRDefaultLanguage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblOCRDefaultLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 15</value>
@@ -5371,7 +6115,10 @@
     <value>4</value>
   </data>
   <data name="cbCaptureOCRDefaultLanguage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 24</value>
+    <value>10, 30</value>
+  </data>
+  <data name="cbCaptureOCRDefaultLanguage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbCaptureOCRDefaultLanguage.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 23</value>
@@ -5395,7 +6142,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpOCR.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpOCR.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 451</value>
@@ -5422,7 +6169,10 @@
     <value>Fill</value>
   </data>
   <data name="tcCapture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 4</value>
+  </data>
+  <data name="tcCapture.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tcCapture.Size" type="System.Drawing.Size, System.Drawing">
     <value>565, 477</value>
@@ -5446,7 +6196,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpCapture.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpCapture.Size" type="System.Drawing.Size, System.Drawing">
     <value>571, 483</value>
@@ -5481,8 +6231,11 @@
   <data name="cbOverrideUploadSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="cbOverrideUploadSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="cbOverrideUploadSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 0</value>
+    <value>10, 10, 10, 0</value>
   </data>
   <data name="cbOverrideUploadSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 27</value>
@@ -5527,7 +6280,10 @@
     <value>0</value>
   </data>
   <data name="txtURLRegexReplaceReplacement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 368</value>
+    <value>10, 460</value>
+  </data>
+  <data name="txtURLRegexReplaceReplacement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtURLRegexReplaceReplacement.Size" type="System.Drawing.Size, System.Drawing">
     <value>352, 23</value>
@@ -5554,7 +6310,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblURLRegexReplaceReplacement.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 352</value>
+    <value>6, 440</value>
+  </data>
+  <data name="lblURLRegexReplaceReplacement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblURLRegexReplaceReplacement.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 15</value>
@@ -5578,7 +6337,10 @@
     <value>1</value>
   </data>
   <data name="txtURLRegexReplacePattern.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 328</value>
+    <value>10, 410</value>
+  </data>
+  <data name="txtURLRegexReplacePattern.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtURLRegexReplacePattern.Size" type="System.Drawing.Size, System.Drawing">
     <value>352, 23</value>
@@ -5605,7 +6367,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblURLRegexReplacePattern.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 312</value>
+    <value>6, 390</value>
+  </data>
+  <data name="lblURLRegexReplacePattern.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblURLRegexReplacePattern.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 15</value>
@@ -5635,7 +6400,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbURLRegexReplace.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 288</value>
+    <value>10, 360</value>
+  </data>
+  <data name="cbURLRegexReplace.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbURLRegexReplace.Size" type="System.Drawing.Size, System.Drawing">
     <value>324, 19</value>
@@ -5662,10 +6430,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnAutoIncrementNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 176</value>
+    <value>150, 220</value>
+  </data>
+  <data name="btnAutoIncrementNumber.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnAutoIncrementNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 23</value>
+    <value>120, 29</value>
   </data>
   <data name="btnAutoIncrementNumber.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -5692,7 +6463,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblAutoIncrementNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 160</value>
+    <value>6, 200</value>
+  </data>
+  <data name="lblAutoIncrementNumber.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblAutoIncrementNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 15</value>
@@ -5716,7 +6490,10 @@
     <value>6</value>
   </data>
   <data name="nudAutoIncrementNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 177</value>
+    <value>10, 221</value>
+  </data>
+  <data name="nudAutoIncrementNumber.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="nudAutoIncrementNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 23</value>
@@ -5746,7 +6523,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbFileUploadReplaceProblematicCharacters.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 264</value>
+    <value>10, 330</value>
+  </data>
+  <data name="cbFileUploadReplaceProblematicCharacters.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbFileUploadReplaceProblematicCharacters.Size" type="System.Drawing.Size, System.Drawing">
     <value>405, 19</value>
@@ -5776,7 +6556,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbNameFormatCustomTimeZone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 208</value>
+    <value>10, 260</value>
+  </data>
+  <data name="cbNameFormatCustomTimeZone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbNameFormatCustomTimeZone.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 19</value>
@@ -5806,7 +6589,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblNameFormatPatternPreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 48</value>
+    <value>6, 60</value>
+  </data>
+  <data name="lblNameFormatPatternPreview.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblNameFormatPatternPreview.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 15</value>
@@ -5836,7 +6622,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblNameFormatPatternActiveWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 72</value>
+    <value>6, 90</value>
+  </data>
+  <data name="lblNameFormatPatternActiveWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblNameFormatPatternActiveWindow.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 15</value>
@@ -5866,7 +6655,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblNameFormatPatternPreviewActiveWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 112</value>
+    <value>6, 140</value>
+  </data>
+  <data name="lblNameFormatPatternPreviewActiveWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblNameFormatPatternPreviewActiveWindow.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 15</value>
@@ -5890,7 +6682,10 @@
     <value>12</value>
   </data>
   <data name="cbNameFormatTimeZone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 232</value>
+    <value>10, 290</value>
+  </data>
+  <data name="cbNameFormatTimeZone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbNameFormatTimeZone.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 23</value>
@@ -5911,7 +6706,10 @@
     <value>13</value>
   </data>
   <data name="txtNameFormatPatternActiveWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 88</value>
+    <value>10, 110</value>
+  </data>
+  <data name="txtNameFormatPatternActiveWindow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtNameFormatPatternActiveWindow.Size" type="System.Drawing.Size, System.Drawing">
     <value>448, 23</value>
@@ -5938,7 +6736,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbFileUploadUseNamePattern.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 136</value>
+    <value>10, 170</value>
+  </data>
+  <data name="cbFileUploadUseNamePattern.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbFileUploadUseNamePattern.Size" type="System.Drawing.Size, System.Drawing">
     <value>343, 19</value>
@@ -5968,7 +6769,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblNameFormatPattern.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 8</value>
+    <value>6, 10</value>
+  </data>
+  <data name="lblNameFormatPattern.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblNameFormatPattern.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 15</value>
@@ -5992,7 +6796,10 @@
     <value>16</value>
   </data>
   <data name="txtNameFormatPattern.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 24</value>
+    <value>10, 30</value>
+  </data>
+  <data name="txtNameFormatPattern.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtNameFormatPattern.Size" type="System.Drawing.Size, System.Drawing">
     <value>448, 23</value>
@@ -6016,7 +6823,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpFileNaming.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpFileNaming.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 451</value>
@@ -6046,7 +6853,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbClipboardUploadShareURL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 56</value>
+    <value>10, 70</value>
+  </data>
+  <data name="cbClipboardUploadShareURL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbClipboardUploadShareURL.Size" type="System.Drawing.Size, System.Drawing">
     <value>372, 19</value>
@@ -6076,7 +6886,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbClipboardUploadURLContents.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
+    <value>10, 10</value>
+  </data>
+  <data name="cbClipboardUploadURLContents.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbClipboardUploadURLContents.Size" type="System.Drawing.Size, System.Drawing">
     <value>342, 19</value>
@@ -6106,7 +6919,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbClipboardUploadAutoIndexFolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 80</value>
+    <value>10, 100</value>
+  </data>
+  <data name="cbClipboardUploadAutoIndexFolder.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbClipboardUploadAutoIndexFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>434, 19</value>
@@ -6136,7 +6952,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbClipboardUploadShortenURL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 32</value>
+    <value>10, 40</value>
+  </data>
+  <data name="cbClipboardUploadShortenURL.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbClipboardUploadShortenURL.Size" type="System.Drawing.Size, System.Drawing">
     <value>292, 19</value>
@@ -6163,7 +6982,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpUploadClipboard.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpUploadClipboard.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 451</value>
@@ -6193,16 +7012,19 @@
     <value>Uploader</value>
   </data>
   <data name="chUploaderFiltersName.Width" type="System.Int32, mscorlib">
-    <value>128</value>
+    <value>160</value>
   </data>
   <data name="chUploaderFiltersExtension.Text" xml:space="preserve">
     <value>Extension</value>
   </data>
   <data name="chUploaderFiltersExtension.Width" type="System.Int32, mscorlib">
-    <value>98</value>
+    <value>122</value>
   </data>
   <data name="lvUploaderFiltersList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 136</value>
+    <value>10, 170</value>
+  </data>
+  <data name="lvUploaderFiltersList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="lvUploaderFiltersList.Size" type="System.Drawing.Size, System.Drawing">
     <value>536, 308</value>
@@ -6226,10 +7048,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnUploaderFiltersRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 104</value>
+    <value>350, 130</value>
+  </data>
+  <data name="btnUploaderFiltersRemove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnUploaderFiltersRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 23</value>
+    <value>160, 29</value>
   </data>
   <data name="btnUploaderFiltersRemove.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -6253,10 +7078,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnUploaderFiltersUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 104</value>
+    <value>180, 130</value>
+  </data>
+  <data name="btnUploaderFiltersUpdate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnUploaderFiltersUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 23</value>
+    <value>160, 29</value>
   </data>
   <data name="btnUploaderFiltersUpdate.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -6280,10 +7108,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnUploaderFiltersAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 104</value>
+    <value>10, 130</value>
+  </data>
+  <data name="btnUploaderFiltersAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnUploaderFiltersAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 23</value>
+    <value>160, 29</value>
   </data>
   <data name="btnUploaderFiltersAdd.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -6310,7 +7141,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblUploaderFiltersDestination.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 8</value>
+    <value>6, 10</value>
+  </data>
+  <data name="lblUploaderFiltersDestination.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblUploaderFiltersDestination.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 15</value>
@@ -6334,7 +7168,10 @@
     <value>4</value>
   </data>
   <data name="cbUploaderFiltersDestination.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 24</value>
+    <value>10, 30</value>
+  </data>
+  <data name="cbUploaderFiltersDestination.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbUploaderFiltersDestination.Size" type="System.Drawing.Size, System.Drawing">
     <value>352, 23</value>
@@ -6361,7 +7198,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblUploaderFiltersExtensionsExample.Location" type="System.Drawing.Point, System.Drawing">
-    <value>368, 76</value>
+    <value>460, 95</value>
+  </data>
+  <data name="lblUploaderFiltersExtensionsExample.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblUploaderFiltersExtensionsExample.Size" type="System.Drawing.Size, System.Drawing">
     <value>130, 15</value>
@@ -6391,7 +7231,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblUploaderFiltersExtensions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 56</value>
+    <value>6, 70</value>
+  </data>
+  <data name="lblUploaderFiltersExtensions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblUploaderFiltersExtensions.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 15</value>
@@ -6415,7 +7258,10 @@
     <value>7</value>
   </data>
   <data name="txtUploaderFiltersExtensions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 72</value>
+    <value>10, 90</value>
+  </data>
+  <data name="txtUploaderFiltersExtensions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtUploaderFiltersExtensions.Size" type="System.Drawing.Size, System.Drawing">
     <value>352, 23</value>
@@ -6439,7 +7285,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpUploaderFilters.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpUploaderFilters.Size" type="System.Drawing.Size, System.Drawing">
     <value>557, 451</value>
@@ -6466,7 +7312,10 @@
     <value>Fill</value>
   </data>
   <data name="tcUpload.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 4</value>
+  </data>
+  <data name="tcUpload.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tcUpload.Size" type="System.Drawing.Size, System.Drawing">
     <value>565, 477</value>
@@ -6490,7 +7339,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpUpload.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpUpload.Size" type="System.Drawing.Size, System.Drawing">
     <value>571, 483</value>
@@ -6517,10 +7366,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnActions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>392, 32</value>
+    <value>490, 40</value>
+  </data>
+  <data name="btnActions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnActions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+    <value>110, 29</value>
   </data>
   <data name="btnActions.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -6547,7 +7399,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblActionsNote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 8</value>
+    <value>6, 10</value>
+  </data>
+  <data name="lblActionsNote.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblActionsNote.Size" type="System.Drawing.Size, System.Drawing">
     <value>448, 15</value>
@@ -6577,10 +7432,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnActionsDuplicate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 32</value>
+    <value>250, 40</value>
+  </data>
+  <data name="btnActionsDuplicate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnActionsDuplicate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+    <value>110, 29</value>
   </data>
   <data name="btnActionsDuplicate.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -6604,10 +7462,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnActionsAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 32</value>
+    <value>10, 40</value>
+  </data>
+  <data name="btnActionsAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnActionsAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+    <value>110, 29</value>
   </data>
   <data name="btnActionsAdd.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -6634,28 +7495,31 @@
     <value>Name</value>
   </data>
   <data name="chActionsName.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>112</value>
   </data>
   <data name="chActionsPath.Text" xml:space="preserve">
     <value>File path</value>
   </data>
   <data name="chActionsPath.Width" type="System.Int32, mscorlib">
-    <value>220</value>
+    <value>275</value>
   </data>
   <data name="chActionsArgs.Text" xml:space="preserve">
     <value>Arguments</value>
   </data>
   <data name="chActionsArgs.Width" type="System.Int32, mscorlib">
-    <value>114</value>
+    <value>142</value>
   </data>
   <data name="chActionsExtensions.Text" xml:space="preserve">
     <value>Extensions</value>
   </data>
   <data name="chActionsExtensions.Width" type="System.Int32, mscorlib">
-    <value>75</value>
+    <value>94</value>
   </data>
   <data name="lvActions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 64</value>
+    <value>10, 80</value>
+  </data>
+  <data name="lvActions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="lvActions.Size" type="System.Drawing.Size, System.Drawing">
     <value>552, 385</value>
@@ -6682,10 +7546,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnActionsEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 32</value>
+    <value>130, 40</value>
+  </data>
+  <data name="btnActionsEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnActionsEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+    <value>110, 29</value>
   </data>
   <data name="btnActionsEdit.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -6712,10 +7579,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnActionsRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 32</value>
+    <value>370, 40</value>
+  </data>
+  <data name="btnActionsRemove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnActionsRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+    <value>110, 29</value>
   </data>
   <data name="btnActionsRemove.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -6774,8 +7644,11 @@
   <data name="cbOverrideActions.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="cbOverrideActions.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="cbOverrideActions.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 0</value>
+    <value>10, 10, 10, 0</value>
   </data>
   <data name="cbOverrideActions.Size" type="System.Drawing.Size, System.Drawing">
     <value>571, 27</value>
@@ -6826,10 +7699,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnWatchFolderEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 32</value>
+    <value>130, 40</value>
+  </data>
+  <data name="btnWatchFolderEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnWatchFolderEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 24</value>
+    <value>110, 30</value>
   </data>
   <data name="btnWatchFolderEdit.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -6856,7 +7732,10 @@
     <value>NoControl</value>
   </data>
   <data name="cbWatchFolderEnabled.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 8</value>
+    <value>10, 10</value>
+  </data>
+  <data name="cbWatchFolderEnabled.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbWatchFolderEnabled.Size" type="System.Drawing.Size, System.Drawing">
     <value>295, 19</value>
@@ -6886,25 +7765,28 @@
     <value>Folder path</value>
   </data>
   <data name="chWatchFolderFolderPath.Width" type="System.Int32, mscorlib">
-    <value>323</value>
+    <value>404</value>
   </data>
   <data name="chWatchFolderFilter.Text" xml:space="preserve">
     <value>Filter</value>
   </data>
   <data name="chWatchFolderFilter.Width" type="System.Int32, mscorlib">
-    <value>43</value>
+    <value>54</value>
   </data>
   <data name="chWatchFolderIncludeSubdirectories.Text" xml:space="preserve">
     <value>Include subdirectories</value>
   </data>
   <data name="chWatchFolderIncludeSubdirectories.Width" type="System.Int32, mscorlib">
-    <value>182</value>
+    <value>228</value>
   </data>
   <data name="lvWatchFolderList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 64</value>
+    <value>10, 80</value>
+  </data>
+  <data name="lvWatchFolderList.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="lvWatchFolderList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 414</value>
+    <value>689, 513</value>
   </data>
   <data name="lvWatchFolderList.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -6925,10 +7807,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnWatchFolderRemove.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 32</value>
+    <value>250, 40</value>
+  </data>
+  <data name="btnWatchFolderRemove.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnWatchFolderRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+    <value>110, 29</value>
   </data>
   <data name="btnWatchFolderRemove.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -6952,10 +7837,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnWatchFolderAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 32</value>
+    <value>10, 40</value>
+  </data>
+  <data name="btnWatchFolderAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="btnWatchFolderAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
+    <value>110, 29</value>
   </data>
   <data name="btnWatchFolderAdd.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -6979,7 +7867,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpWatchFolders.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpWatchFolders.Size" type="System.Drawing.Size, System.Drawing">
     <value>571, 483</value>
@@ -7003,7 +7891,10 @@
     <value>6</value>
   </data>
   <data name="txtToolsScreenColorPickerFormatCtrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 71</value>
+    <value>10, 89</value>
+  </data>
+  <data name="txtToolsScreenColorPickerFormatCtrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtToolsScreenColorPickerFormatCtrl.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 23</value>
@@ -7030,7 +7921,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToolsScreenColorPickerFormatCtrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 55</value>
+    <value>6, 69</value>
+  </data>
+  <data name="lblToolsScreenColorPickerFormatCtrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToolsScreenColorPickerFormatCtrl.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 15</value>
@@ -7054,7 +7948,10 @@
     <value>1</value>
   </data>
   <data name="txtToolsScreenColorPickerInfoText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 118</value>
+    <value>10, 148</value>
+  </data>
+  <data name="txtToolsScreenColorPickerInfoText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtToolsScreenColorPickerInfoText.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 23</value>
@@ -7081,7 +7978,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToolsScreenColorPickerInfoText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 102</value>
+    <value>6, 128</value>
+  </data>
+  <data name="lblToolsScreenColorPickerInfoText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToolsScreenColorPickerInfoText.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 15</value>
@@ -7105,7 +8005,10 @@
     <value>3</value>
   </data>
   <data name="txtToolsScreenColorPickerFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 24</value>
+    <value>10, 30</value>
+  </data>
+  <data name="txtToolsScreenColorPickerFormat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="txtToolsScreenColorPickerFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>288, 23</value>
@@ -7132,7 +8035,10 @@
     <value>NoControl</value>
   </data>
   <data name="lblToolsScreenColorPickerFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 8</value>
+    <value>6, 10</value>
+  </data>
+  <data name="lblToolsScreenColorPickerFormat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="lblToolsScreenColorPickerFormat.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 15</value>
@@ -7191,8 +8097,11 @@
   <data name="cbOverrideToolsSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="cbOverrideToolsSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="cbOverrideToolsSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 8, 8, 0</value>
+    <value>10, 10, 10, 0</value>
   </data>
   <data name="cbOverrideToolsSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>571, 27</value>
@@ -7273,10 +8182,13 @@
     <value>NoControl</value>
   </data>
   <data name="cbOverrideAdvancedSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 4</value>
+  </data>
+  <data name="cbOverrideAdvancedSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbOverrideAdvancedSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 8</value>
+    <value>6, 6, 6, 10</value>
   </data>
   <data name="cbOverrideAdvancedSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>565, 32</value>
@@ -7303,7 +8215,7 @@
     <value>4, 24</value>
   </data>
   <data name="tpAdvanced.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tpAdvanced.Size" type="System.Drawing.Size, System.Drawing">
     <value>571, 483</value>
@@ -7330,10 +8242,13 @@
     <value>Right</value>
   </data>
   <data name="tcTaskSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>205, 0</value>
+    <value>256, 0</value>
+  </data>
+  <data name="tcTaskSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tcTaskSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>579, 511</value>
+    <value>724, 639</value>
   </data>
   <data name="tcTaskSettings.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -7363,7 +8278,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tttvMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 511</value>
+    <value>980, 639</value>
   </data>
   <data name="tttvMain.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -7384,13 +8299,16 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>96, 96</value>
+    <value>120, 120</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 511</value>
+    <value>980, 639</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 550</value>
+    <value>996, 676</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

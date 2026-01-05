@@ -6,6 +6,7 @@
     <AssemblyName>ShareX_Launcher</AssemblyName>
     <ApplicationIcon>ShareX_Icon.ico</ApplicationIcon>
     <UseWindowsForms>true</UseWindowsForms>
+    <NoWarn>WFO1000</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System.Management" />

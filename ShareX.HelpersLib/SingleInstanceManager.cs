@@ -102,6 +102,7 @@ namespace ShareX.HelpersLib
 
                     using (NamedPipeServerStream namedPipeServer = NamedPipeServerStreamAcl.Create(PipeName, PipeDirection.InOut, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous, 0, 0, pipeSecurity))
                     {
+                        // namedPipeServer.SetAccessControl(pipeSecurity);
                         namedPipeServerCreated = true;
 
                         await namedPipeServer.WaitForConnectionAsync(cts.Token).ConfigureAwait(false);

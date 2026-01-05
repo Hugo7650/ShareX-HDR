@@ -2011,7 +2011,9 @@ namespace ShareX
                 RemoveOutsideScreenArea = true,
                 CaptureShadow = taskSettings.CaptureSettings.CaptureShadow,
                 ShadowOffset = taskSettings.CaptureSettings.CaptureShadowOffset,
-                AutoHideTaskbar = taskSettings.CaptureSettings.CaptureAutoHideTaskbar
+                AutoHideTaskbar = taskSettings.CaptureSettings.CaptureAutoHideTaskbar,
+                UseWinRTCaptureAPI = taskSettings.CaptureSettings.UseHDRSupport,
+                HdrSettings = taskSettings.CaptureSettings.HdrSettings,
             };
 
             return screenshot;
@@ -2257,9 +2259,10 @@ namespace ShareX
 
         public static async Task DownloadDevBuild()
         {
-            GitHubUpdateChecker updateChecker = new GitHubUpdateChecker("ShareX", "DevBuilds")
+            GitHubUpdateChecker updateChecker = new GitHubUpdateChecker("GotoFinal", "ShareX-HDR")
             {
                 IsDev = true,
+                IncludePreRelease = true,
                 IsPortable = Program.Portable
             };
 
@@ -2273,20 +2276,6 @@ namespace ShareX
             {
                 MessageBox.Show(Resources.ShareXIsUpToDate, "ShareX", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        public static async Task DownloadAppVeyorBuild()
-        {
-            AppVeyorUpdateChecker updateChecker = new AppVeyorUpdateChecker()
-            {
-                IsDev = true,
-                IsPortable = Program.Portable,
-                Branch = "develop"
-            };
-
-            await updateChecker.CheckUpdateAsync();
-
-            UpdateMessageBox.Start(updateChecker);
         }
 
         public static Image GenerateQRCode(string text, int size)
