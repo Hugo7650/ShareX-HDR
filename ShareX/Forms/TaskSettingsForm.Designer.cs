@@ -177,6 +177,7 @@
             lblRegionCaptureFixedSizeHeight = new System.Windows.Forms.Label();
             nudRegionCaptureFixedSizeHeight = new System.Windows.Forms.NumericUpDown();
             cbRegionCaptureIsFixedSize = new System.Windows.Forms.CheckBox();
+            cbRegionCaptureShowCenterCrosshair = new System.Windows.Forms.CheckBox();
             cbRegionCaptureShowCrosshair = new System.Windows.Forms.CheckBox();
             lblRegionCaptureMagnifierPixelSize = new System.Windows.Forms.Label();
             lblRegionCaptureMagnifierPixelCount = new System.Windows.Forms.Label();
@@ -308,6 +309,7 @@
             btnWatchFolderAdd = new System.Windows.Forms.Button();
             tpTools = new System.Windows.Forms.TabPage();
             pTools = new System.Windows.Forms.Panel();
+            cbImageEditorUseLegacyImageEditor = new System.Windows.Forms.CheckBox();
             txtToolsScreenColorPickerFormatCtrl = new System.Windows.Forms.TextBox();
             lblToolsScreenColorPickerFormatCtrl = new System.Windows.Forms.Label();
             txtToolsScreenColorPickerInfoText = new System.Windows.Forms.TextBox();
@@ -1392,6 +1394,7 @@
             tpRegionCapture.Controls.Add(cbRegionCaptureShowFPS);
             tpRegionCapture.Controls.Add(flpRegionCaptureFixedSize);
             tpRegionCapture.Controls.Add(cbRegionCaptureIsFixedSize);
+            tpRegionCapture.Controls.Add(cbRegionCaptureShowCenterCrosshair);
             tpRegionCapture.Controls.Add(cbRegionCaptureShowCrosshair);
             tpRegionCapture.Controls.Add(lblRegionCaptureMagnifierPixelSize);
             tpRegionCapture.Controls.Add(lblRegionCaptureMagnifierPixelCount);
@@ -1509,6 +1512,13 @@
             cbRegionCaptureIsFixedSize.Name = "cbRegionCaptureIsFixedSize";
             cbRegionCaptureIsFixedSize.UseVisualStyleBackColor = true;
             cbRegionCaptureIsFixedSize.CheckedChanged += cbRegionCaptureIsFixedSize_CheckedChanged;
+            // 
+            // cbRegionCaptureShowCenterCrosshair
+            // 
+            resources.ApplyResources(cbRegionCaptureShowCenterCrosshair, "cbRegionCaptureShowCenterCrosshair");
+            cbRegionCaptureShowCenterCrosshair.Name = "cbRegionCaptureShowCenterCrosshair";
+            cbRegionCaptureShowCenterCrosshair.UseVisualStyleBackColor = true;
+            cbRegionCaptureShowCenterCrosshair.CheckedChanged += cbRegionCaptureShowCenterCrosshair_CheckedChanged;
             // 
             // cbRegionCaptureShowCrosshair
             // 
@@ -2458,6 +2468,7 @@
             // 
             // pTools
             // 
+            pTools.Controls.Add(cbImageEditorUseLegacyImageEditor);
             pTools.Controls.Add(txtToolsScreenColorPickerFormatCtrl);
             pTools.Controls.Add(lblToolsScreenColorPickerFormatCtrl);
             pTools.Controls.Add(txtToolsScreenColorPickerInfoText);
@@ -2466,6 +2477,13 @@
             pTools.Controls.Add(lblToolsScreenColorPickerFormat);
             resources.ApplyResources(pTools, "pTools");
             pTools.Name = "pTools";
+            // 
+            // cbImageEditorUseLegacyImageEditor
+            // 
+            resources.ApplyResources(cbImageEditorUseLegacyImageEditor, "cbImageEditorUseLegacyImageEditor");
+            cbImageEditorUseLegacyImageEditor.Name = "cbImageEditorUseLegacyImageEditor";
+            cbImageEditorUseLegacyImageEditor.UseVisualStyleBackColor = true;
+            cbImageEditorUseLegacyImageEditor.CheckedChanged += cbImageEditorUseLegacyImageEditor_CheckedChanged;
             // 
             // txtToolsScreenColorPickerFormatCtrl
             // 
@@ -2826,6 +2844,7 @@
         private System.Windows.Forms.NumericUpDown nudRegionCaptureMagnifierPixelCount;
         private System.Windows.Forms.NumericUpDown nudRegionCaptureMagnifierPixelSize;
         private System.Windows.Forms.Label lblRegionCaptureMagnifierPixelSize;
+        private System.Windows.Forms.CheckBox cbRegionCaptureShowCenterCrosshair;
         private System.Windows.Forms.CheckBox cbRegionCaptureShowCrosshair;
         private System.Windows.Forms.FlowLayoutPanel flpRegionCaptureFixedSize;
         private System.Windows.Forms.Label lblRegionCaptureFixedSizeWidth;
@@ -2835,6 +2854,7 @@
         private System.Windows.Forms.NumericUpDown nudRegionCaptureFixedSizeHeight;
         private System.Windows.Forms.CheckBox cbRegionCaptureShowFPS;
         private System.Windows.Forms.CheckBox cbImageAutoUseJPEG;
+        private System.Windows.Forms.CheckBox cbImageEditorUseLegacyImageEditor;
         private System.Windows.Forms.Panel pTools;
         private System.Windows.Forms.TextBox txtToolsScreenColorPickerFormat;
         private System.Windows.Forms.Label lblToolsScreenColorPickerFormat;
