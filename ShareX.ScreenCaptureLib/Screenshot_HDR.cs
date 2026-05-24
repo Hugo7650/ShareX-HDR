@@ -698,6 +698,10 @@ namespace ShareX.ScreenCaptureLib
                 // Duplicate the output
                 bool gotDuplication = false;
                 int texFormat = DXGI_FORMAT_B8G8R8A8_UNORM;
+                // texRotation: 1=IDENTITY, 2=ROTATE90(CW), 3=ROTATE180, 4=ROTATE270(CW)
+                // DXGI Desktop Duplication always returns the texture in physical (pre-rotation)
+                // orientation. We must rotate it back to match the logical desktop coordinates.
+                uint texRotation = 1;
 
                 try
                 {
@@ -710,7 +714,8 @@ namespace ShareX.ScreenCaptureLib
                         gotDuplication = true;
                         duplication.GetDesc(out DXGI_OUTDUPL_DESC dd);
                         texFormat = (int)dd.ModeDesc.Format;
-                        DebugHelper.WriteLine($"HDR: DuplicateOutput1 OK, format={texFormat}");
+                        texRotation = dd.Rotation;
+                        DebugHelper.WriteLine($"HDR: DuplicateOutput1 OK, format={texFormat}, rotation={texRotation}");
                     }
                     else
                     {
@@ -733,7 +738,8 @@ namespace ShareX.ScreenCaptureLib
                     }
                     duplication.GetDesc(out DXGI_OUTDUPL_DESC dd);
                     texFormat = (int)dd.ModeDesc.Format;
-                    DebugHelper.WriteLine($"HDR: DuplicateOutput (legacy) OK, format={texFormat}");
+                    texRotation = dd.Rotation;
+                    DebugHelper.WriteLine($"HDR: DuplicateOutput (legacy) OK, format={texFormat}, rotation={texRotation}");
                 }
 
                 // Warm-up and frame acquisition with retry loop.
@@ -818,24 +824,97 @@ namespace ShareX.ScreenCaptureLib
 
                         try
                         {
-                            // The intersection is in virtual desktop coordinates.
-                            // Source offset within the monitor texture: subtract
-                            // the monitor's top-left since the texture starts at (0,0).
-                            int srcX = intersection.X - monitorRect.X;
-                            int srcY = intersection.Y - monitorRect.Y;
-                            int copyW = Math.Min(intersection.Width, texW - srcX);
-                            int copyH = Math.Min(intersection.Height, texH - srcY);
+                            // The intersection is in virtual desktop (logical) coordinates.
+                            // DXGI Desktop Duplication always gives the texture in physical
+                            // (pre-rotation) orientation. For rotated monitors, we must:
+                            //   1. Map the logical intersection to its physical region in the texture.
+                            //   2. Blit the physical region to a temporary bitmap.
+                            //   3. Rotate the temporary bitmap to restore logical orientation.
+                            //   4. Composite into the output.
+                            //
+                            // Coordinate derivation for ROTATE90 (90° CW, e.g. landscape panel in
+                            // portrait mode): logical (lx,ly) <-> physical (texW-1-ly, lx).
+                            // For ROTATE270: logical (lx,ly) <-> physical (ly, texH-1-lx).
+                            // For ROTATE180: logical (lx,ly) <-> physical (texW-1-lx, texH-1-ly).
 
-                            // Destination offset within the composite bitmap:
-                            // subtract the overall capture rect's top-left.
+                            int logSrcX = intersection.X - monitorRect.X;
+                            int logSrcY = intersection.Y - monitorRect.Y;
+                            int logCopyW = intersection.Width;
+                            int logCopyH = intersection.Height;
+
                             int dstX = intersection.X - captureRect.X;
                             int dstY = intersection.Y - captureRect.Y;
 
-                            if (copyW > 0 && copyH > 0)
+                            if (texRotation <= 1) // IDENTITY (or unspecified)
                             {
-                                BlitHDRToComposite(mapped.pData, (int)mapped.RowPitch, texW, texH,
-                                    td.Format, srcX, srcY, copyW, copyH,
-                                    composite, dstX, dstY, normScale);
+                                int copyW = Math.Min(logCopyW, texW - logSrcX);
+                                int copyH = Math.Min(logCopyH, texH - logSrcY);
+                                if (copyW > 0 && copyH > 0)
+                                {
+                                    BlitHDRToComposite(mapped.pData, (int)mapped.RowPitch, texW, texH,
+                                        td.Format, logSrcX, logSrcY, copyW, copyH,
+                                        composite, dstX, dstY, normScale);
+                                }
+                            }
+                            else
+                            {
+                                // Compute the physical source rectangle and the flip needed
+                                // to rotate it back to logical orientation.
+                                int phySrcX, phySrcY, phyCopyW, phyCopyH;
+                                RotateFlipType flipType;
+
+                                switch (texRotation)
+                                {
+                                    case 2: // ROTATE90 (90° CW display): apply 90° CW to texture → logical
+                                        phySrcX = logSrcY;
+                                        phySrcY = texH - logSrcX - logCopyW;
+                                        phyCopyW = logCopyH;
+                                        phyCopyH = logCopyW;
+                                        flipType = RotateFlipType.Rotate90FlipNone;
+                                        break;
+                                    case 3: // ROTATE180: apply 180° to texture → logical
+                                        phySrcX = texW - logSrcX - logCopyW;
+                                        phySrcY = texH - logSrcY - logCopyH;
+                                        phyCopyW = logCopyW;
+                                        phyCopyH = logCopyH;
+                                        flipType = RotateFlipType.Rotate180FlipNone;
+                                        break;
+                                    case 4: // ROTATE270 (270° CW display): apply 270° CW to texture → logical
+                                        phySrcX = texW - logSrcY - logCopyH;
+                                        phySrcY = logSrcX;
+                                        phyCopyW = logCopyH;
+                                        phyCopyH = logCopyW;
+                                        flipType = RotateFlipType.Rotate270FlipNone;
+                                        break;
+                                    default:
+                                        phySrcX = logSrcX;
+                                        phySrcY = logSrcY;
+                                        phyCopyW = logCopyW;
+                                        phyCopyH = logCopyH;
+                                        flipType = RotateFlipType.RotateNoneFlipNone;
+                                        break;
+                                }
+
+                                phySrcX = Math.Max(0, phySrcX);
+                                phySrcY = Math.Max(0, phySrcY);
+                                phyCopyW = Math.Min(phyCopyW, texW - phySrcX);
+                                phyCopyH = Math.Min(phyCopyH, texH - phySrcY);
+
+                                if (phyCopyW > 0 && phyCopyH > 0)
+                                {
+                                    using (Bitmap tmp = new Bitmap(phyCopyW, phyCopyH, PixelFormat.Format32bppArgb))
+                                    {
+                                        BlitHDRToComposite(mapped.pData, (int)mapped.RowPitch, texW, texH,
+                                            td.Format, phySrcX, phySrcY, phyCopyW, phyCopyH,
+                                            tmp, 0, 0, normScale);
+
+                                        if (flipType != RotateFlipType.RotateNoneFlipNone)
+                                            tmp.RotateFlip(flipType);
+
+                                        using (Graphics g = Graphics.FromImage(composite))
+                                            g.DrawImageUnscaled(tmp, dstX, dstY);
+                                    }
+                                }
                             }
 
                             return true;
