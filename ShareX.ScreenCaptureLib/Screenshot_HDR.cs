@@ -44,6 +44,7 @@
 
 using ShareX.HelpersLib;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
@@ -62,6 +63,7 @@ namespace ShareX.ScreenCaptureLib
         #region DisplayConfig P/Invoke
 
         private const int QDC_ONLY_ACTIVE_PATHS = 0x00000002;
+        private const int DISPLAYCONFIG_DEVICE_INFO_GET_SOURCE_NAME = 1;
         private const int DISPLAYCONFIG_DEVICE_INFO_GET_SDR_WHITE_LEVEL = 11;
 
         [StructLayout(LayoutKind.Sequential)]
@@ -137,8 +139,19 @@ namespace ShareX.ScreenCaptureLib
             [Out] DISPLAYCONFIG_PATH_INFO[] paths, ref int numModes,
             [Out] DISPLAYCONFIG_MODE_INFO[] modes, IntPtr topology);
 
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+        private struct DISPLAYCONFIG_SOURCE_DEVICE_NAME
+        {
+            public DISPLAYCONFIG_DEVICE_INFO_HEADER header;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
+            public string viewGdiDeviceName;
+        }
+
         [DllImport("user32.dll")]
         private static extern int DisplayConfigGetDeviceInfo(ref DISPLAYCONFIG_SDR_WHITE_LEVEL info);
+
+        [DllImport("user32.dll")]
+        private static extern int DisplayConfigGetDeviceInfo(ref DISPLAYCONFIG_SOURCE_DEVICE_NAME info);
 
         #endregion
 
@@ -447,37 +460,59 @@ namespace ShareX.ScreenCaptureLib
         // Main HDR Capture (multi-monitor aware)
         // ====================================================================
 
-        private static float GetSdrWhiteNits()
+        /// <summary>
+        /// Builds a per-monitor SDR white level map keyed by GDI device name
+        /// (e.g. "\\.\DISPLAY1"). Each value is the SDR white level in nits
+        /// for that monitor. SDR monitors return ~80 nits; HDR monitors with
+        /// elevated SDR white return a higher value (e.g. 160–300 nits).
+        /// normScale = 80 / nits ensures each monitor's scRGB values are
+        /// correctly normalised regardless of its HDR/SDR configuration.
+        /// </summary>
+        private static Dictionary<string, float> BuildSdrNitsMap()
         {
+            var map = new Dictionary<string, float>(StringComparer.OrdinalIgnoreCase);
             try
             {
                 int r = GetDisplayConfigBufferSizes(QDC_ONLY_ACTIVE_PATHS, out int pc, out int mc);
-                if (r != 0) return 80f;
+                if (r != 0) return map;
                 var paths = new DISPLAYCONFIG_PATH_INFO[pc];
                 var modes = new DISPLAYCONFIG_MODE_INFO[mc];
                 r = QueryDisplayConfig(QDC_ONLY_ACTIVE_PATHS, ref pc, paths, ref mc, modes, IntPtr.Zero);
-                if (r != 0) return 80f;
+                if (r != 0) return map;
 
                 for (int i = 0; i < pc; i++)
                 {
-                    var info = new DISPLAYCONFIG_SDR_WHITE_LEVEL();
-                    info.header.type = DISPLAYCONFIG_DEVICE_INFO_GET_SDR_WHITE_LEVEL;
-                    info.header.size = (uint)Marshal.SizeOf<DISPLAYCONFIG_SDR_WHITE_LEVEL>();
-                    info.header.adapterId = paths[i].targetInfo.adapterId;
-                    info.header.id = paths[i].targetInfo.id;
-                    if (DisplayConfigGetDeviceInfo(ref info) == 0 && info.SDRWhiteLevel > 0)
-                    {
-                        float nits = (info.SDRWhiteLevel / 1000f) * 80f;
-                        DebugHelper.WriteLine($"HDR: SDR white level = {nits} nits (raw {info.SDRWhiteLevel})");
-                        return nits;
-                    }
+                    // Resolve GDI device name for the source (e.g. "\\.\DISPLAY2")
+                    var srcName = new DISPLAYCONFIG_SOURCE_DEVICE_NAME();
+                    srcName.header.type = DISPLAYCONFIG_DEVICE_INFO_GET_SOURCE_NAME;
+                    srcName.header.size = (uint)Marshal.SizeOf<DISPLAYCONFIG_SOURCE_DEVICE_NAME>();
+                    srcName.header.adapterId = paths[i].sourceInfo.adapterId;
+                    srcName.header.id = paths[i].sourceInfo.id;
+                    if (DisplayConfigGetDeviceInfo(ref srcName) != 0 || string.IsNullOrEmpty(srcName.viewGdiDeviceName))
+                        continue;
+
+                    // Query the SDR white level for this target
+                    var white = new DISPLAYCONFIG_SDR_WHITE_LEVEL();
+                    white.header.type = DISPLAYCONFIG_DEVICE_INFO_GET_SDR_WHITE_LEVEL;
+                    white.header.size = (uint)Marshal.SizeOf<DISPLAYCONFIG_SDR_WHITE_LEVEL>();
+                    white.header.adapterId = paths[i].targetInfo.adapterId;
+                    white.header.id = paths[i].targetInfo.id;
+
+                    float nits = 80f;
+                    if (DisplayConfigGetDeviceInfo(ref white) == 0 && white.SDRWhiteLevel > 0)
+                        nits = (white.SDRWhiteLevel / 1000f) * 80f;
+
+                    if (!map.ContainsKey(srcName.viewGdiDeviceName))
+                        map[srcName.viewGdiDeviceName] = nits;
+
+                    DebugHelper.WriteLine($"HDR: {srcName.viewGdiDeviceName} SDR white = {nits} nits (raw {white.SDRWhiteLevel})");
                 }
             }
             catch (Exception e)
             {
-                DebugHelper.WriteException(e, "HDR: SDR white level query failed.");
+                DebugHelper.WriteException(e, "HDR: BuildSdrNitsMap failed.");
             }
-            return 80f;
+            return map;
         }
 
         /// <summary>
@@ -493,9 +528,9 @@ namespace ShareX.ScreenCaptureLib
 
             try
             {
-                float sdrWhiteNits = GetSdrWhiteNits();
-                float normScale = 80f / sdrWhiteNits;
-                DebugHelper.WriteLine($"HDR: normScale={normScale} (sdrWhite={sdrWhiteNits})");
+                // Build per-monitor SDR white level map once, then compute
+                // normScale individually for each output inside the loop.
+                var sdrNitsMap = BuildSdrNitsMap();
 
                 // Step 1: Create D3D11 device
                 int[] levels = { 0xb100, 0xb000 };
@@ -564,6 +599,13 @@ namespace ShareX.ScreenCaptureLib
                         }
 
                         DebugHelper.WriteLine($"HDR: Output {outputIdx} ({outputDesc.DeviceName}) {monitorRect}, intersection={intersection}");
+
+                        // Compute per-monitor normScale: SDR monitors have ~80 nits SDR white
+                        // (normScale ≈ 1.0). HDR monitors with elevated SDR white (e.g. 200 nits)
+                        // get a smaller scale so their scRGB values map correctly to [0,1].
+                        float sdrWhiteNits = sdrNitsMap.TryGetValue(outputDesc.DeviceName, out float perMonNits) ? perMonNits : 80f;
+                        float normScale = 80f / sdrWhiteNits;
+                        DebugHelper.WriteLine($"HDR: Output {outputIdx} normScale={normScale:F3} ({sdrWhiteNits} nits)");
 
                         // Probe the output's format to decide the capture path.
                         // SDR monitors (B8G8R8A8) get a fast GDI BitBlt instead of
