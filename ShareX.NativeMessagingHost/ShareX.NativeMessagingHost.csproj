@@ -5,6 +5,7 @@
     <OutputType>WinExe</OutputType>
     <AssemblyName>ShareX_NativeMessagingHost</AssemblyName>
     <UseWindowsForms>true</UseWindowsForms>
+    <NoWarn>WFO1000</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShareX.HelpersLib\ShareX.HelpersLib.csproj" />

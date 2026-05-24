@@ -177,7 +177,6 @@
             lblRegionCaptureFixedSizeHeight = new System.Windows.Forms.Label();
             nudRegionCaptureFixedSizeHeight = new System.Windows.Forms.NumericUpDown();
             cbRegionCaptureIsFixedSize = new System.Windows.Forms.CheckBox();
-            cbRegionCaptureShowCenterCrosshair = new System.Windows.Forms.CheckBox();
             cbRegionCaptureShowCrosshair = new System.Windows.Forms.CheckBox();
             lblRegionCaptureMagnifierPixelSize = new System.Windows.Forms.Label();
             lblRegionCaptureMagnifierPixelCount = new System.Windows.Forms.Label();
@@ -233,6 +232,17 @@
             cbCaptureOCRSilent = new System.Windows.Forms.CheckBox();
             lblOCRDefaultLanguage = new System.Windows.Forms.Label();
             cbCaptureOCRDefaultLanguage = new System.Windows.Forms.ComboBox();
+            tpHDR = new System.Windows.Forms.TabPage();
+            lblCaptureToneMapType = new System.Windows.Forms.Label();
+            cbToneMapType = new System.Windows.Forms.ComboBox();
+            cbUse99ThPercentileMaxCll = new System.Windows.Forms.CheckBox();
+            lblCaptureSDRScale = new System.Windows.Forms.Label();
+            nudCaptureSDRScale = new System.Windows.Forms.NumericUpDown();
+            lblCaptureBrightnessScale = new System.Windows.Forms.Label();
+            nudCaptureBrightnessScale = new System.Windows.Forms.NumericUpDown();
+            lblCaptureHdrNits = new System.Windows.Forms.Label();
+            nudCaptureHDRNits = new System.Windows.Forms.NumericUpDown();
+            cbUseHDR = new System.Windows.Forms.CheckBox();
             tpUpload = new System.Windows.Forms.TabPage();
             tcUpload = new System.Windows.Forms.TabControl();
             tpUploadMain = new System.Windows.Forms.TabPage();
@@ -273,18 +283,6 @@
             lblUploaderFiltersExtensionsExample = new System.Windows.Forms.Label();
             lblUploaderFiltersExtensions = new System.Windows.Forms.Label();
             txtUploaderFiltersExtensions = new System.Windows.Forms.TextBox();
-            tpTools = new System.Windows.Forms.TabPage();
-            tcTools = new System.Windows.Forms.TabControl();
-            tpToolsGeneral = new System.Windows.Forms.TabPage();
-            pTools = new System.Windows.Forms.Panel();
-            cbImageEditorUseLegacyImageEditor = new System.Windows.Forms.CheckBox();
-            txtToolsScreenColorPickerFormatCtrl = new System.Windows.Forms.TextBox();
-            lblToolsScreenColorPickerFormatCtrl = new System.Windows.Forms.Label();
-            txtToolsScreenColorPickerInfoText = new System.Windows.Forms.TextBox();
-            lblToolsScreenColorPickerInfoText = new System.Windows.Forms.Label();
-            txtToolsScreenColorPickerFormat = new System.Windows.Forms.TextBox();
-            lblToolsScreenColorPickerFormat = new System.Windows.Forms.Label();
-            cbOverrideToolsSettings = new System.Windows.Forms.CheckBox();
             tpActions = new System.Windows.Forms.TabPage();
             pActions = new System.Windows.Forms.Panel();
             btnActions = new System.Windows.Forms.Button();
@@ -308,6 +306,15 @@
             chWatchFolderIncludeSubdirectories = new System.Windows.Forms.ColumnHeader();
             btnWatchFolderRemove = new System.Windows.Forms.Button();
             btnWatchFolderAdd = new System.Windows.Forms.Button();
+            tpTools = new System.Windows.Forms.TabPage();
+            pTools = new System.Windows.Forms.Panel();
+            txtToolsScreenColorPickerFormatCtrl = new System.Windows.Forms.TextBox();
+            lblToolsScreenColorPickerFormatCtrl = new System.Windows.Forms.Label();
+            txtToolsScreenColorPickerInfoText = new System.Windows.Forms.TextBox();
+            lblToolsScreenColorPickerInfoText = new System.Windows.Forms.Label();
+            txtToolsScreenColorPickerFormat = new System.Windows.Forms.TextBox();
+            lblToolsScreenColorPickerFormat = new System.Windows.Forms.Label();
+            cbOverrideToolsSettings = new System.Windows.Forms.CheckBox();
             tpAdvanced = new System.Windows.Forms.TabPage();
             pgTaskSettings = new System.Windows.Forms.PropertyGrid();
             cbOverrideAdvancedSettings = new System.Windows.Forms.CheckBox();
@@ -361,6 +368,10 @@
             ((System.ComponentModel.ISupportInitialize)nudScreenRecorderStartDelay).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudGIFFPS).BeginInit();
             tpOCR.SuspendLayout();
+            tpHDR.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudCaptureSDRScale).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudCaptureBrightnessScale).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudCaptureHDRNits).BeginInit();
             tpUpload.SuspendLayout();
             tcUpload.SuspendLayout();
             tpUploadMain.SuspendLayout();
@@ -368,13 +379,11 @@
             ((System.ComponentModel.ISupportInitialize)nudAutoIncrementNumber).BeginInit();
             tpUploadClipboard.SuspendLayout();
             tpUploaderFilters.SuspendLayout();
-            tpTools.SuspendLayout();
-            tcTools.SuspendLayout();
-            tpToolsGeneral.SuspendLayout();
-            pTools.SuspendLayout();
             tpActions.SuspendLayout();
             pActions.SuspendLayout();
             tpWatchFolders.SuspendLayout();
+            tpTools.SuspendLayout();
+            pTools.SuspendLayout();
             tpAdvanced.SuspendLayout();
             SuspendLayout();
             // 
@@ -432,9 +441,9 @@
             tcTaskSettings.Controls.Add(tpImage);
             tcTaskSettings.Controls.Add(tpCapture);
             tcTaskSettings.Controls.Add(tpUpload);
-            tcTaskSettings.Controls.Add(tpTools);
             tcTaskSettings.Controls.Add(tpActions);
             tcTaskSettings.Controls.Add(tpWatchFolders);
+            tcTaskSettings.Controls.Add(tpTools);
             tcTaskSettings.Controls.Add(tpAdvanced);
             resources.ApplyResources(tcTaskSettings, "tcTaskSettings");
             tcTaskSettings.Name = "tcTaskSettings";
@@ -1173,6 +1182,7 @@
             tcCapture.Controls.Add(tpRegionCapture);
             tcCapture.Controls.Add(tpScreenRecorder);
             tcCapture.Controls.Add(tpOCR);
+            tcCapture.Controls.Add(tpHDR);
             resources.ApplyResources(tcCapture, "tcCapture");
             tcCapture.Name = "tcCapture";
             tcCapture.SelectedIndex = 0;
@@ -1382,7 +1392,6 @@
             tpRegionCapture.Controls.Add(cbRegionCaptureShowFPS);
             tpRegionCapture.Controls.Add(flpRegionCaptureFixedSize);
             tpRegionCapture.Controls.Add(cbRegionCaptureIsFixedSize);
-            tpRegionCapture.Controls.Add(cbRegionCaptureShowCenterCrosshair);
             tpRegionCapture.Controls.Add(cbRegionCaptureShowCrosshair);
             tpRegionCapture.Controls.Add(lblRegionCaptureMagnifierPixelSize);
             tpRegionCapture.Controls.Add(lblRegionCaptureMagnifierPixelCount);
@@ -1500,13 +1509,6 @@
             cbRegionCaptureIsFixedSize.Name = "cbRegionCaptureIsFixedSize";
             cbRegionCaptureIsFixedSize.UseVisualStyleBackColor = true;
             cbRegionCaptureIsFixedSize.CheckedChanged += cbRegionCaptureIsFixedSize_CheckedChanged;
-            // 
-            // cbRegionCaptureShowCenterCrosshair
-            // 
-            resources.ApplyResources(cbRegionCaptureShowCenterCrosshair, "cbRegionCaptureShowCenterCrosshair");
-            cbRegionCaptureShowCenterCrosshair.Name = "cbRegionCaptureShowCenterCrosshair";
-            cbRegionCaptureShowCenterCrosshair.UseVisualStyleBackColor = true;
-            cbRegionCaptureShowCenterCrosshair.CheckedChanged += cbRegionCaptureShowCenterCrosshair_CheckedChanged;
             // 
             // cbRegionCaptureShowCrosshair
             // 
@@ -1906,6 +1908,96 @@
             cbCaptureOCRDefaultLanguage.Name = "cbCaptureOCRDefaultLanguage";
             cbCaptureOCRDefaultLanguage.SelectedIndexChanged += cbCaptureOCRDefaultLanguage_SelectedIndexChanged;
             // 
+            // tpHDR
+            // 
+            tpHDR.Controls.Add(lblCaptureToneMapType);
+            tpHDR.Controls.Add(cbToneMapType);
+            tpHDR.Controls.Add(cbUse99ThPercentileMaxCll);
+            tpHDR.Controls.Add(lblCaptureSDRScale);
+            tpHDR.Controls.Add(nudCaptureSDRScale);
+            tpHDR.Controls.Add(lblCaptureBrightnessScale);
+            tpHDR.Controls.Add(nudCaptureBrightnessScale);
+            tpHDR.Controls.Add(lblCaptureHdrNits);
+            tpHDR.Controls.Add(nudCaptureHDRNits);
+            tpHDR.Controls.Add(cbUseHDR);
+            resources.ApplyResources(tpHDR, "tpHDR");
+            tpHDR.Name = "tpHDR";
+            tpHDR.UseVisualStyleBackColor = true;
+            // 
+            // lblCaptureToneMapType
+            // 
+            resources.ApplyResources(lblCaptureToneMapType, "lblCaptureToneMapType");
+            lblCaptureToneMapType.Name = "lblCaptureToneMapType";
+            // 
+            // cbToneMapType
+            // 
+            cbToneMapType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbToneMapType.FormattingEnabled = true;
+            resources.ApplyResources(cbToneMapType, "cbToneMapType");
+            cbToneMapType.Name = "cbToneMapType";
+            cbToneMapType.SelectedIndexChanged += cbToneMapType_SelectedIndexChanged;
+            // 
+            // cbUse99ThPercentileMaxCll
+            // 
+            resources.ApplyResources(cbUse99ThPercentileMaxCll, "cbUse99ThPercentileMaxCll");
+            cbUse99ThPercentileMaxCll.Checked = true;
+            cbUse99ThPercentileMaxCll.CheckState = System.Windows.Forms.CheckState.Checked;
+            cbUse99ThPercentileMaxCll.Name = "cbUse99ThPercentileMaxCll";
+            cbUse99ThPercentileMaxCll.UseVisualStyleBackColor = true;
+            cbUse99ThPercentileMaxCll.CheckedChanged += cbUse99ThPercentileMaxCll_CheckedChanged;
+            // 
+            // lblCaptureSDRScale
+            // 
+            resources.ApplyResources(lblCaptureSDRScale, "lblCaptureSDRScale");
+            lblCaptureSDRScale.Name = "lblCaptureSDRScale";
+            // 
+            // nudCaptureSDRScale
+            // 
+            nudCaptureSDRScale.DecimalPlaces = 2;
+            resources.ApplyResources(nudCaptureSDRScale, "nudCaptureSDRScale");
+            nudCaptureSDRScale.Maximum = new decimal(new int[] { 2000, 0, 0, 0 });
+            nudCaptureSDRScale.Name = "nudCaptureSDRScale";
+            nudCaptureSDRScale.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            nudCaptureSDRScale.ValueChanged += nudCaptureSDRScale_ValueChanged;
+            // 
+            // lblCaptureBrightnessScale
+            // 
+            resources.ApplyResources(lblCaptureBrightnessScale, "lblCaptureBrightnessScale");
+            lblCaptureBrightnessScale.Name = "lblCaptureBrightnessScale";
+            // 
+            // nudCaptureBrightnessScale
+            // 
+            nudCaptureBrightnessScale.DecimalPlaces = 2;
+            resources.ApplyResources(nudCaptureBrightnessScale, "nudCaptureBrightnessScale");
+            nudCaptureBrightnessScale.Maximum = new decimal(new int[] { 2000, 0, 0, 0 });
+            nudCaptureBrightnessScale.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nudCaptureBrightnessScale.Name = "nudCaptureBrightnessScale";
+            nudCaptureBrightnessScale.Value = new decimal(new int[] { 100, 0, 0, 0 });
+            nudCaptureBrightnessScale.ValueChanged += nudCaptureBrightnessScale_ValueChanged;
+            // 
+            // lblCaptureHdrNits
+            // 
+            resources.ApplyResources(lblCaptureHdrNits, "lblCaptureHdrNits");
+            lblCaptureHdrNits.Name = "lblCaptureHdrNits";
+            // 
+            // nudCaptureHDRNits
+            // 
+            resources.ApplyResources(nudCaptureHDRNits, "nudCaptureHDRNits");
+            nudCaptureHDRNits.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
+            nudCaptureHDRNits.Minimum = new decimal(new int[] { 80, 0, 0, 0 });
+            nudCaptureHDRNits.Name = "nudCaptureHDRNits";
+            nudCaptureHDRNits.Value = new decimal(new int[] { 203, 0, 0, 0 });
+            nudCaptureHDRNits.ValueChanged += nudCaptureHDRNits_ValueChanged;
+            // 
+            // cbUseHDR
+            // 
+            resources.ApplyResources(cbUseHDR, "cbUseHDR");
+            cbUseHDR.Checked = true;
+            cbUseHDR.CheckState = System.Windows.Forms.CheckState.Checked;
+            cbUseHDR.Name = "cbUseHDR";
+            cbUseHDR.UseVisualStyleBackColor = true;
+            cbUseHDR.CheckedChanged += cbUseWinRTCapture_CheckedChanged;
+            // 
             // tpUpload
             // 
             tpUpload.BackColor = System.Drawing.SystemColors.Window;
@@ -2191,89 +2283,6 @@
             resources.ApplyResources(txtUploaderFiltersExtensions, "txtUploaderFiltersExtensions");
             txtUploaderFiltersExtensions.Name = "txtUploaderFiltersExtensions";
             // 
-            // tpTools
-            // 
-            tpTools.BackColor = System.Drawing.SystemColors.Window;
-            tpTools.Controls.Add(tcTools);
-            resources.ApplyResources(tpTools, "tpTools");
-            tpTools.Name = "tpTools";
-            // 
-            // tcTools
-            // 
-            tcTools.Controls.Add(tpToolsGeneral);
-            resources.ApplyResources(tcTools, "tcTools");
-            tcTools.Name = "tcTools";
-            tcTools.SelectedIndex = 0;
-            // 
-            // tpToolsGeneral
-            // 
-            tpToolsGeneral.Controls.Add(pTools);
-            tpToolsGeneral.Controls.Add(cbOverrideToolsSettings);
-            resources.ApplyResources(tpToolsGeneral, "tpToolsGeneral");
-            tpToolsGeneral.Name = "tpToolsGeneral";
-            tpToolsGeneral.UseVisualStyleBackColor = true;
-            // 
-            // pTools
-            // 
-            pTools.Controls.Add(cbImageEditorUseLegacyImageEditor);
-            pTools.Controls.Add(txtToolsScreenColorPickerFormatCtrl);
-            pTools.Controls.Add(lblToolsScreenColorPickerFormatCtrl);
-            pTools.Controls.Add(txtToolsScreenColorPickerInfoText);
-            pTools.Controls.Add(lblToolsScreenColorPickerInfoText);
-            pTools.Controls.Add(txtToolsScreenColorPickerFormat);
-            pTools.Controls.Add(lblToolsScreenColorPickerFormat);
-            resources.ApplyResources(pTools, "pTools");
-            pTools.Name = "pTools";
-            // 
-            // cbImageEditorUseLegacyImageEditor
-            // 
-            resources.ApplyResources(cbImageEditorUseLegacyImageEditor, "cbImageEditorUseLegacyImageEditor");
-            cbImageEditorUseLegacyImageEditor.Name = "cbImageEditorUseLegacyImageEditor";
-            cbImageEditorUseLegacyImageEditor.UseVisualStyleBackColor = true;
-            cbImageEditorUseLegacyImageEditor.CheckedChanged += cbImageEditorUseLegacyImageEditor_CheckedChanged;
-            // 
-            // txtToolsScreenColorPickerFormatCtrl
-            // 
-            resources.ApplyResources(txtToolsScreenColorPickerFormatCtrl, "txtToolsScreenColorPickerFormatCtrl");
-            txtToolsScreenColorPickerFormatCtrl.Name = "txtToolsScreenColorPickerFormatCtrl";
-            txtToolsScreenColorPickerFormatCtrl.TextChanged += txtToolsScreenColorPickerFormatCtrl_TextChanged;
-            // 
-            // lblToolsScreenColorPickerFormatCtrl
-            // 
-            resources.ApplyResources(lblToolsScreenColorPickerFormatCtrl, "lblToolsScreenColorPickerFormatCtrl");
-            lblToolsScreenColorPickerFormatCtrl.Name = "lblToolsScreenColorPickerFormatCtrl";
-            // 
-            // txtToolsScreenColorPickerInfoText
-            // 
-            resources.ApplyResources(txtToolsScreenColorPickerInfoText, "txtToolsScreenColorPickerInfoText");
-            txtToolsScreenColorPickerInfoText.Name = "txtToolsScreenColorPickerInfoText";
-            txtToolsScreenColorPickerInfoText.TextChanged += txtToolsScreenColorPickerInfoText_TextChanged;
-            // 
-            // lblToolsScreenColorPickerInfoText
-            // 
-            resources.ApplyResources(lblToolsScreenColorPickerInfoText, "lblToolsScreenColorPickerInfoText");
-            lblToolsScreenColorPickerInfoText.Name = "lblToolsScreenColorPickerInfoText";
-            // 
-            // txtToolsScreenColorPickerFormat
-            // 
-            resources.ApplyResources(txtToolsScreenColorPickerFormat, "txtToolsScreenColorPickerFormat");
-            txtToolsScreenColorPickerFormat.Name = "txtToolsScreenColorPickerFormat";
-            txtToolsScreenColorPickerFormat.TextChanged += txtToolsScreenColorPickerFormat_TextChanged;
-            // 
-            // lblToolsScreenColorPickerFormat
-            // 
-            resources.ApplyResources(lblToolsScreenColorPickerFormat, "lblToolsScreenColorPickerFormat");
-            lblToolsScreenColorPickerFormat.Name = "lblToolsScreenColorPickerFormat";
-            // 
-            // cbOverrideToolsSettings
-            // 
-            resources.ApplyResources(cbOverrideToolsSettings, "cbOverrideToolsSettings");
-            cbOverrideToolsSettings.Checked = true;
-            cbOverrideToolsSettings.CheckState = System.Windows.Forms.CheckState.Checked;
-            cbOverrideToolsSettings.Name = "cbOverrideToolsSettings";
-            cbOverrideToolsSettings.UseVisualStyleBackColor = true;
-            cbOverrideToolsSettings.CheckedChanged += cbUseDefaultToolsSettings_CheckedChanged;
-            // 
             // tpActions
             // 
             tpActions.BackColor = System.Drawing.SystemColors.Window;
@@ -2439,6 +2448,67 @@
             btnWatchFolderAdd.UseVisualStyleBackColor = true;
             btnWatchFolderAdd.Click += btnWatchFolderAdd_Click;
             // 
+            // tpTools
+            // 
+            tpTools.BackColor = System.Drawing.SystemColors.Window;
+            tpTools.Controls.Add(pTools);
+            tpTools.Controls.Add(cbOverrideToolsSettings);
+            resources.ApplyResources(tpTools, "tpTools");
+            tpTools.Name = "tpTools";
+            // 
+            // pTools
+            // 
+            pTools.Controls.Add(txtToolsScreenColorPickerFormatCtrl);
+            pTools.Controls.Add(lblToolsScreenColorPickerFormatCtrl);
+            pTools.Controls.Add(txtToolsScreenColorPickerInfoText);
+            pTools.Controls.Add(lblToolsScreenColorPickerInfoText);
+            pTools.Controls.Add(txtToolsScreenColorPickerFormat);
+            pTools.Controls.Add(lblToolsScreenColorPickerFormat);
+            resources.ApplyResources(pTools, "pTools");
+            pTools.Name = "pTools";
+            // 
+            // txtToolsScreenColorPickerFormatCtrl
+            // 
+            resources.ApplyResources(txtToolsScreenColorPickerFormatCtrl, "txtToolsScreenColorPickerFormatCtrl");
+            txtToolsScreenColorPickerFormatCtrl.Name = "txtToolsScreenColorPickerFormatCtrl";
+            txtToolsScreenColorPickerFormatCtrl.TextChanged += txtToolsScreenColorPickerFormatCtrl_TextChanged;
+            // 
+            // lblToolsScreenColorPickerFormatCtrl
+            // 
+            resources.ApplyResources(lblToolsScreenColorPickerFormatCtrl, "lblToolsScreenColorPickerFormatCtrl");
+            lblToolsScreenColorPickerFormatCtrl.Name = "lblToolsScreenColorPickerFormatCtrl";
+            // 
+            // txtToolsScreenColorPickerInfoText
+            // 
+            resources.ApplyResources(txtToolsScreenColorPickerInfoText, "txtToolsScreenColorPickerInfoText");
+            txtToolsScreenColorPickerInfoText.Name = "txtToolsScreenColorPickerInfoText";
+            txtToolsScreenColorPickerInfoText.TextChanged += txtToolsScreenColorPickerInfoText_TextChanged;
+            // 
+            // lblToolsScreenColorPickerInfoText
+            // 
+            resources.ApplyResources(lblToolsScreenColorPickerInfoText, "lblToolsScreenColorPickerInfoText");
+            lblToolsScreenColorPickerInfoText.Name = "lblToolsScreenColorPickerInfoText";
+            // 
+            // txtToolsScreenColorPickerFormat
+            // 
+            resources.ApplyResources(txtToolsScreenColorPickerFormat, "txtToolsScreenColorPickerFormat");
+            txtToolsScreenColorPickerFormat.Name = "txtToolsScreenColorPickerFormat";
+            txtToolsScreenColorPickerFormat.TextChanged += txtToolsScreenColorPickerFormat_TextChanged;
+            // 
+            // lblToolsScreenColorPickerFormat
+            // 
+            resources.ApplyResources(lblToolsScreenColorPickerFormat, "lblToolsScreenColorPickerFormat");
+            lblToolsScreenColorPickerFormat.Name = "lblToolsScreenColorPickerFormat";
+            // 
+            // cbOverrideToolsSettings
+            // 
+            resources.ApplyResources(cbOverrideToolsSettings, "cbOverrideToolsSettings");
+            cbOverrideToolsSettings.Checked = true;
+            cbOverrideToolsSettings.CheckState = System.Windows.Forms.CheckState.Checked;
+            cbOverrideToolsSettings.Name = "cbOverrideToolsSettings";
+            cbOverrideToolsSettings.UseVisualStyleBackColor = true;
+            cbOverrideToolsSettings.CheckedChanged += cbUseDefaultToolsSettings_CheckedChanged;
+            // 
             // tpAdvanced
             // 
             tpAdvanced.BackColor = System.Drawing.SystemColors.Window;
@@ -2550,6 +2620,11 @@
             ((System.ComponentModel.ISupportInitialize)nudGIFFPS).EndInit();
             tpOCR.ResumeLayout(false);
             tpOCR.PerformLayout();
+            tpHDR.ResumeLayout(false);
+            tpHDR.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudCaptureSDRScale).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudCaptureBrightnessScale).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudCaptureHDRNits).EndInit();
             tpUpload.ResumeLayout(false);
             tcUpload.ResumeLayout(false);
             tpUploadMain.ResumeLayout(false);
@@ -2561,18 +2636,16 @@
             tpUploadClipboard.PerformLayout();
             tpUploaderFilters.ResumeLayout(false);
             tpUploaderFilters.PerformLayout();
-            tpTools.ResumeLayout(false);
-            tcTools.ResumeLayout(false);
-            tpToolsGeneral.ResumeLayout(false);
-            tpToolsGeneral.PerformLayout();
-            pTools.ResumeLayout(false);
-            pTools.PerformLayout();
             tpActions.ResumeLayout(false);
             tpActions.PerformLayout();
             pActions.ResumeLayout(false);
             pActions.PerformLayout();
             tpWatchFolders.ResumeLayout(false);
             tpWatchFolders.PerformLayout();
+            tpTools.ResumeLayout(false);
+            tpTools.PerformLayout();
+            pTools.ResumeLayout(false);
+            pTools.PerformLayout();
             tpAdvanced.ResumeLayout(false);
             tpAdvanced.PerformLayout();
             ResumeLayout(false);
@@ -2753,7 +2826,6 @@
         private System.Windows.Forms.NumericUpDown nudRegionCaptureMagnifierPixelCount;
         private System.Windows.Forms.NumericUpDown nudRegionCaptureMagnifierPixelSize;
         private System.Windows.Forms.Label lblRegionCaptureMagnifierPixelSize;
-        private System.Windows.Forms.CheckBox cbRegionCaptureShowCenterCrosshair;
         private System.Windows.Forms.CheckBox cbRegionCaptureShowCrosshair;
         private System.Windows.Forms.FlowLayoutPanel flpRegionCaptureFixedSize;
         private System.Windows.Forms.Label lblRegionCaptureFixedSizeWidth;
@@ -2860,8 +2932,16 @@
         private System.Windows.Forms.TextBox txtCustomActionCompletedSoundPath;
         private System.Windows.Forms.CheckBox cbUseCustomActionCompletedSound;
         private System.Windows.Forms.CheckBox cbCaptureAutoHideDesktopIcons;
-        private System.Windows.Forms.CheckBox cbImageEditorUseLegacyImageEditor;
-        private System.Windows.Forms.TabControl tcTools;
-        private System.Windows.Forms.TabPage tpToolsGeneral;
+        private System.Windows.Forms.TabPage tpHDR;
+        private System.Windows.Forms.Label lblCaptureToneMapType;
+        private System.Windows.Forms.ComboBox cbToneMapType;
+        private System.Windows.Forms.CheckBox cbUse99ThPercentileMaxCll;
+        private System.Windows.Forms.Label lblCaptureSDRScale;
+        private System.Windows.Forms.NumericUpDown nudCaptureSDRScale;
+        private System.Windows.Forms.Label lblCaptureBrightnessScale;
+        private System.Windows.Forms.NumericUpDown nudCaptureBrightnessScale;
+        private System.Windows.Forms.Label lblCaptureHdrNits;
+        private System.Windows.Forms.NumericUpDown nudCaptureHDRNits;
+        private System.Windows.Forms.CheckBox cbUseHDR;
     }
 }

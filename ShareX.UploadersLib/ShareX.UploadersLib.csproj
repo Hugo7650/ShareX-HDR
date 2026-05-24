@@ -4,6 +4,7 @@
     <OutputType>Library</OutputType>
     <UseWindowsForms>true</UseWindowsForms>
     <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
+    <NoWarn>WFO1000</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="FluentFTP" />

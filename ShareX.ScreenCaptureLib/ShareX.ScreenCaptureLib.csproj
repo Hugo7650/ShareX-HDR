@@ -3,7 +3,22 @@
     <TargetFramework>net9.0-windows</TargetFramework>
     <OutputType>Library</OutputType>
     <UseWindowsForms>true</UseWindowsForms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>WFO1000</NoWarn>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BetterWin32Errors" Version="0.2.0" />
+    <PackageReference Include="DirectXTexNet" Version="1.0.7" />
+    <PackageReference Include="ImageListView" Version="13.8.2" />
+    <PackageReference Include="Veldrid.RenderDoc" Version="1.0.1" />
+    <PackageReference Include="Vortice.D3DCompiler" Version="3.7.4-beta" />
+    <PackageReference Include="Vortice.Direct2D1" Version="3.7.4-beta" />
+    <PackageReference Include="Vortice.Direct3D11" Version="3.7.4-beta" />
+    <PackageReference Include="Vortice.DXGI" Version="3.7.4-beta" />
+    <PackageReference Include="Vortice.Mathematics" Version="1.9.3" />
+    <PackageReference Include="ZXing.Net" Version="0.16.10" />
+    <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" Version="0.16.13" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShareX.HelpersLib\ShareX.HelpersLib.csproj" />
     <ProjectReference Include="..\ShareX.ImageEffectsLib\ShareX.ImageEffectsLib.csproj" />
@@ -14,4 +29,35 @@
       <HintPath>..\Libs\ImageListView.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <PixelShader Include="AdvancedGraphics\Direct3D\Shaders\PostProcessingColor.hlsl" />
+    <VertexShader Include="AdvancedGraphics\Direct3D\Shaders\PostProcessingQuad.hlsl" />
+    <None Include="AdvancedGraphics\Direct3D\Shaders\ShaderInputStructure.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(IntermediateOutputPath)\AdvancedGraphics\Direct3D\Shaders\PostProcessingColor.cso">
+      <LogicalName>D3D11Shaders.PostProcessingColor.cso</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(IntermediateOutputPath)\AdvancedGraphics\Direct3D\Shaders\PostProcessingQuad.cso">
+      <LogicalName>D3D11Shaders.PostProcessingQuad.cso</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Target Name="CompileShaders" BeforeTargets="CoreCompile">
+    <PropertyGroup>
+      <ShaderOutputPath>$(IntermediateOutputPath)AdvancedGraphics\Direct3D\Shaders</ShaderOutputPath>
+    </PropertyGroup>
+    <!-- Find Windows SDK fxc.exe -->
+    <ItemGroup>
+      <FxcCandidates Include="C:\Program Files (x86)\Windows Kits\10\bin\**\x64\fxc.exe" />
+    </ItemGroup>
+    <PropertyGroup>
+      <FxcExe Condition="'@(FxcCandidates)' != ''">@(FxcCandidates->Reverse(), ';')</FxcExe>
+      <FxcExe Condition="'$(FxcExe)' == ''">fxc.exe</FxcExe>
+      <!-- Get first match -->
+      <FxcExe>$([System.String]::Copy('$(FxcExe)').Split(';')[0])</FxcExe>
+    </PropertyGroup>
+    <MakeDir Directories="$(ShaderOutputPath)" />
+    <Exec Command="&quot;$(FxcExe)&quot; /T ps_5_0 /E main /Fo &quot;$(ShaderOutputPath)\PostProcessingColor.cso&quot; &quot;%(PixelShader.Identity)&quot;" WorkingDirectory="$(ProjectDir)" />
+    <Exec Command="&quot;$(FxcExe)&quot; /T vs_5_0 /E main /Fo &quot;$(ShaderOutputPath)\PostProcessingQuad.cso&quot; &quot;%(VertexShader.Identity)&quot;" WorkingDirectory="$(ProjectDir)" />
+  </Target>
 </Project>

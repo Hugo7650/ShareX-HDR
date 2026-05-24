@@ -210,7 +210,9 @@ namespace ShareX.ScreenCaptureLib
                     ShowCrosshair = options.ShowCrosshair,
                     AnnotationOptions = options.AnnotationOptions,
                     ScreenColorPickerInfoText = options.ScreenColorPickerInfoText,
-                    ActiveMonitorMode = options.ActiveMonitorMode
+                    ActiveMonitorMode = options.ActiveMonitorMode,
+                    UseHdr = options.UseHdr,
+                    HdrSettings = options.HdrSettings,
                 };
             }
         }
