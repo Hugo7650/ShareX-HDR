@@ -15,4 +15,38 @@
       <HintPath>..\Libs\ImageListView.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <!-- HLSL source included in the project for editing; compiled by CompileHLSL target below -->
+    <None Include="Screenshot_HDR_Shader.hlsl" />
+  </ItemGroup>
+
+  <!--
+    Compile the HDR tonemap compute shader to bytecode before the build.
+    Requires fxc.exe from the Windows SDK (included with Visual Studio).
+    The generated .cso is embedded as a managed resource named "HDRTonemap.cso".
+    Incremental: only recompiles when the .hlsl source changes.
+  -->
+  <Target Name="CompileHLSL" BeforeTargets="BeforeBuild"
+          Inputs="$(MSBuildThisFileDirectory)Screenshot_HDR_Shader.hlsl"
+          Outputs="$(IntermediateOutputPath)HDRTonemap.cso">
+    <MakeDir Directories="$(IntermediateOutputPath)" />
+    <!-- Enumerate fxc.exe from any installed Windows SDK version -->
+    <ItemGroup>
+      <_FxcCandidate Include="$(MSBuildProgramFiles32)\Windows Kits\10\bin\*\x64\fxc.exe" />
+      <!-- Also pick up fxc when Visual Studio sets WindowsSdkVerBinPath -->
+      <_FxcCandidate Condition="'$(WindowsSdkVerBinPath)'!='' AND Exists('$(WindowsSdkVerBinPath)x64\fxc.exe')"
+                     Include="$(WindowsSdkVerBinPath)x64\fxc.exe" />
+    </ItemGroup>
+    <Warning Condition="'@(_FxcCandidate)'==''"
+             Text="fxc.exe not found under '$(MSBuildProgramFiles32)\Windows Kits\10\bin\'. HDRTonemap.cso will not be compiled; GPU HDR path will be unavailable at runtime." />
+    <!-- Compile (batching: once per discovered fxc; if multiple SDKs are installed the last wins) -->
+    <Exec Condition="'@(_FxcCandidate)'!=''"
+          Command="&quot;%(_FxcCandidate.FullPath)&quot; /nologo /T cs_5_0 /E CSMain /Fo &quot;$(IntermediateOutputPath)HDRTonemap.cso&quot; &quot;$(MSBuildThisFileDirectory)Screenshot_HDR_Shader.hlsl&quot;" />
+    <ItemGroup>
+      <EmbeddedResource Condition="Exists('$(IntermediateOutputPath)HDRTonemap.cso')"
+                        Include="$(IntermediateOutputPath)HDRTonemap.cso">
+        <LogicalName>HDRTonemap.cso</LogicalName>
+      </EmbeddedResource>
+    </ItemGroup>
+  </Target>
 </Project>
